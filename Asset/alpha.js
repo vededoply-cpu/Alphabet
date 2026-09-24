@@ -879,7 +879,7 @@ function renderAllProductSections() {
 }
 
 function renderShopPage() {
-  const container = document.getElementById('shopCatalogGrid');
+  const container = document.getElementById('shopCatalogGrid') || document.getElementById('shopCollectionGrid');
   const countElem = document.getElementById('shopProductCount');
   if (!container) return;
 
@@ -1030,44 +1030,6 @@ function renderNewArrivals() {
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
-function renderStationeryCollection() {
-  const container = document.getElementById('stationeryCollectionGrid');
-  if (!container) return;
-  const list = PRODUCTS_DATA.filter(p => p.category === 'books' || p.category === 'pens');
-  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
-}
-
-function renderOfficeCollection() {
-  const container = document.getElementById('officeCollectionGrid');
-  if (!container) return;
-  const list = PRODUCTS_DATA.filter(p => p.category === 'office');
-  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
-}
-
-function renderSchoolCollection() {
-  const container = document.getElementById('schoolCollectionGrid');
-  if (!container) return;
-  const list = PRODUCTS_DATA.filter(p => (p.tag && p.tag.toLowerCase().includes('school')) || p.category === 'books');
-  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
-}
-
-function renderShopPage() {
-  const container = document.getElementById('shopCollectionGrid');
-  if (!container) return;
-  const list = getFilteredProducts();
-  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
-}
-
-function renderAllProductSections() {
-  renderMainCollection();
-  renderBestSellers();
-  renderPackagingCollection();
-  renderNewArrivals();
-  renderStationeryCollection();
-  renderOfficeCollection();
-  renderSchoolCollection();
-  renderShopPage();
-}
 
 // Shopping Cart Actions
 function addToCart(productId) {
