@@ -1521,12 +1521,33 @@ function setupEventListeners() {
     });
   }
 
-  // Mobile Menu
+  // User Account Menu Dropdown Click Toggle
+  const loginBtn = document.querySelector('.header-login-btn');
+  const userDropdown = document.getElementById('headerUserDropdown');
+  if (loginBtn && userDropdown) {
+    loginBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      userDropdown.classList.toggle('active');
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.user-account-menu-wrapper')) {
+        userDropdown.classList.remove('active');
+      }
+    });
+  }
+
+  // Mobile Menu Navigation Toggle & Auto-Close on Link Click
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navLinks = document.getElementById('navLinksWrapper');
   if (hamburgerBtn && navLinks) {
-    hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       navLinks.classList.toggle('mobile-open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+      });
     });
   }
 
