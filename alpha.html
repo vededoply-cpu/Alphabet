@@ -797,6 +797,26 @@
             placeholder="Complete Address..."></textarea>
         </div>
 
+        <!-- GST Business Buying Option -->
+        <div style="margin-bottom:14px; padding:12px; background:#f8fafc; border:1px solid #cbd5e1; border-radius:6px;">
+          <label style="display:flex; align-items:center; gap:8px; font-size:0.85rem; font-weight:700; cursor:pointer; color:var(--text-dark);">
+            <input type="checkbox" id="chkGstToggle" onchange="toggleGstInputs(this.checked)" style="width:16px; height:16px;">
+            🏢 I am buying for a Business (Generate Official GST Tax Invoice)
+          </label>
+          <div id="gstFieldsBox" style="display:none; margin-top:10px; padding-top:10px; border-top:1px dashed #cbd5e1;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+              <div>
+                <label style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Business / Firm Name</label>
+                <input type="text" id="chkCompanyName" placeholder="Enterprise Name" style="width:100%; padding:8px 10px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;">
+              </div>
+              <div>
+                <label style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">GSTIN Number</label>
+                <input type="text" id="chkGstNumber" placeholder="22AAAAA0000A1Z5" style="width:100%; padding:8px 10px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;">
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div style="margin-bottom: 20px;">
           <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Payment Method</label>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
@@ -953,7 +973,7 @@
             <li><a href="#contact">Shipping &amp; Delivery</a></li>
             <li><a href="#contact">Returns &amp; Refunds</a></li>
             <li><a href="#contact">FAQs</a></li>
-            <li><a href="#contact">Track Order</a></li>
+            <li><a href="javascript:void(0)" onclick="openTrackOrderModal()">Track Order</a></li>
           </ul>
         </div>
 

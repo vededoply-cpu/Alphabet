@@ -592,6 +592,188 @@ const PRODUCTS_DATA = [
     image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80',
     tag: 'Art & Craft',
     desc: 'Rich pigment 12ml non-toxic artist acrylic and watercolor paints with synthetic hair flat and round brushes.'
+  },
+
+  // 12 New Premium E-Commerce Items (School, Art, Copier & Packaging Expansion)
+  {
+    id: 'prod-39',
+    name: 'Softcover Single-Line Long Book (Pack of 6 | 172 Pages)',
+    category: 'books',
+    categoryName: 'Books & Notebooks',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 215,
+    colors: ['#1e293b', '#c5a059'],
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+    tag: 'School Pack',
+    desc: 'High-brightness 57 GSM white paper longbooks with pin-bound soft covers engineered for school students and daily note-taking.'
+  },
+  {
+    id: 'prod-40',
+    name: '100 GSM Spiral Art Sketchbook A4 (80 Pages)',
+    category: 'books',
+    categoryName: 'Books & Notebooks',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 168,
+    colors: ['#111111'],
+    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80',
+    tag: 'Art & Design',
+    desc: 'Acid-free 160 GSM cartridge paper spiral-bound sketchbook suitable for graphite, charcoal, ink fineliners, and light watercolor washes.'
+  },
+  {
+    id: 'prod-41',
+    name: 'Rollerball Executive Signature Ink Pen Set (Gold Trim)',
+    category: 'pens',
+    categoryName: 'Pens & Writing',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 142,
+    colors: ['#d4af37', '#111111'],
+    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    tag: 'Executive Signature',
+    desc: 'Weighted metal body rollerball pen featuring 0.7mm German liquid ink cartridge and gold-plated clip for executive contract signings.'
+  },
+  {
+    id: 'prod-42',
+    name: 'Fineliner Archival Micro Technical Pens (Pack of 6 Assorted Nibs)',
+    category: 'pens',
+    categoryName: 'Pens & Writing',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 190,
+    colors: ['#111111'],
+    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80',
+    tag: 'Technical Micro',
+    desc: 'Waterproof fade-proof pigment ink micro fineliners with precision metal-clad nib sizes (0.05mm to 0.8mm) for architectural drawing.'
+  },
+  {
+    id: 'prod-43',
+    name: 'A3 Premium Copier Paper Ream (500 Sheets | 80 GSM)',
+    category: 'office',
+    categoryName: 'Office Stationery',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.8,
+    reviewsCount: 135,
+    colors: ['#ffffff'],
+    image: 'Asset/a4_copier_paper.png',
+    tag: 'A3 Format Paper',
+    desc: 'Large format A3 copier paper ream (297 x 420mm) engineered for CAD blueprints, architectural schematics, posters, and double-sided printing.'
+  },
+  {
+    id: 'prod-44',
+    name: 'Self-Adhesive Color Coded Index Dividers (Pack of 12 Sets)',
+    category: 'office',
+    categoryName: 'Office Stationery',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.7,
+    reviewsCount: 88,
+    colors: ['#ffb6c1', '#add8e6', '#e6e6fa'],
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Index Dividers',
+    desc: 'Reinforced tab index page dividers with multi-color headers for ring binder files and corporate document organization.'
+  },
+  {
+    id: 'prod-45',
+    name: 'BOPP Heavy-Duty Brown Shipping Tape Roll (48mm x 65m)',
+    category: 'packaging',
+    categoryName: 'Packaging Solutions',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 380,
+    colors: ['#8b5a2b'],
+    image: 'Asset/bopp_clear_tape.jpg',
+    tag: 'Brown Tape',
+    desc: 'Heavy-duty brown Kraft shade BOPP packaging tape with 50-micron high-adhesion water-based acrylic formulation for corrugated box sealing.'
+  },
+  {
+    id: 'prod-46',
+    name: '5-Ply Heavy Master Freight Shipping Box (Pack of 10)',
+    category: 'packaging',
+    categoryName: 'Packaging Solutions',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 195,
+    colors: ['#c5a059', '#8b5a2b'],
+    image: 'Asset/boxes_stack.jpg',
+    tag: '5-Ply Heavy Master',
+    desc: 'Heavy-duty 5-ply double-wall corrugated master dispatch box capable of carrying up to 35kg load without crushing during long-distance transit.'
+  },
+  {
+    id: 'prod-47',
+    name: 'Heavy-Duty Metal Tabletop Tape Dispenser Gun (For 48mm Tapes)',
+    category: 'packaging',
+    categoryName: 'Packaging Solutions',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 210,
+    colors: ['#ef4444', '#111111'],
+    image: 'Asset/gummed_paper_tape.jpg',
+    tag: 'Tape Dispenser',
+    desc: 'Ergonomic hand-held packaging tape dispenser gun with adjustable tension brake and stainless steel serrated cutter blade.'
+  },
+  {
+    id: 'prod-48',
+    name: 'Multipurpose Metal Wire Mesh Desk Organizer & Letter Tray',
+    category: 'office',
+    categoryName: 'Office Stationery',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.8,
+    reviewsCount: 114,
+    colors: ['#111111'],
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80',
+    tag: 'Desk Organizer',
+    desc: 'Scratch-resistant powder-coated steel mesh desk organizer featuring 3 letter trays, pen cup holder, and sticky note dispenser.'
+  },
+  {
+    id: 'prod-49',
+    name: 'Self-Inking Date & Received Rubber Stamp with Quick-Dry Ink Pad',
+    category: 'office',
+    categoryName: 'Office Stationery',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 152,
+    colors: ['#0000ff', '#ef4444'],
+    image: 'Asset/security_envelopes_box.png',
+    tag: 'Official Stamp',
+    desc: 'Heavy-duty self-inking rubber stamp with 10-year rotary date wheel and replaceable blue/red quick-dry ink cartridge.'
+  },
+  {
+    id: 'prod-50',
+    name: 'Soft Leatherette Zippered Multi-Slot Pencil & Tool Case',
+    category: 'books',
+    categoryName: 'Books & Notebooks',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 175,
+    colors: ['#c5a059', '#111111'],
+    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    tag: 'Executive Pouch',
+    desc: 'Water-resistant vegan leatherette pouch with dual zipper compartments, mesh pockets, and elastic pen loops for students and office executives.'
   }
 ];
 
@@ -946,7 +1128,7 @@ function closeCartDrawer() {
   if (drawer) drawer.classList.remove('open');
 }
 
-// Quick View Modal
+// Quick View Modal with B2B Tiered Pricing, Pincode Checker, and Free Sample Request
 function openQuickView(productId) {
   const p = PRODUCTS_DATA.find(item => item.id === productId);
   if (!p) return;
@@ -956,19 +1138,74 @@ function openQuickView(productId) {
 
   if (!modal || !box) return;
 
+  const isCustomizable = p.id === 'prod-10' || p.id === 'prod-18' || p.category === 'packaging';
+
   box.innerHTML = `
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
-      <img src="${p.image}" alt="${p.name}" style="width: 100%; height: 320px; object-fit: cover; border-radius: var(--radius-md);" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
+    <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; align-items: start;">
       <div>
-        <span class="section-subtitle-tag" style="margin-bottom: 6px;">${p.categoryName}</span>
-        <h3 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; line-height: 1.15; margin-bottom: 12px;">${p.name}</h3>
-        <p style="font-size: 0.95rem; color: var(--text-sub); margin-bottom: 16px;">${p.desc}</p>
-        
-        <div style="font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin-bottom: 20px;">
-          ₹${p.price} ${p.mrp ? `<span style="font-size: 1rem; text-decoration: line-through; color: var(--text-muted); margin-left: 8px;">₹${p.mrp}</span>` : ''}
+        <div style="position:relative; overflow:hidden; border-radius: var(--radius-md); border:1px solid var(--border-light); background:#fff; text-align:center;">
+          <img src="${p.image}" alt="${p.name}" id="qvMainImage" style="width: 100%; height: 320px; object-fit: contain; padding: 12px; cursor: zoom-in;" onclick="openImageLightbox('${p.image}', '${p.name}')" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
+          <div style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:12px; font-size:0.75rem; pointer-events:none;">🔍 Click Image to Zoom HD</div>
         </div>
 
-        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="addToCart('${p.id}'); closeQuickView();">ADD TO SHOPPING BAG</button>
+        ${isCustomizable ? `
+          <div style="margin-top:14px; padding:12px; background:#f8fafc; border-radius:8px; border:1px dashed var(--accent-gold);">
+            <label style="font-size:0.78rem; font-weight:800; color:var(--text-dark); text-transform:uppercase; display:block; margin-bottom:4px;">🎨 Custom Brand Logo / Text Preview:</label>
+            <input type="text" placeholder="Type your company name / logo text..." oninput="updateCustomLogoPreview(this.value)" style="width:100%; padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
+            <div id="customLogoPreviewBox" style="margin-top:8px; padding:8px; background:var(--accent-gold); color:#000; font-weight:800; text-align:center; border-radius:4px; font-size:0.9rem; letter-spacing:1px; display:none;">
+              [YOUR LOGO HERE]
+            </div>
+          </div>
+        ` : ''}
+      </div>
+
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <span class="section-subtitle-tag" style="margin-bottom: 0;">${p.categoryName}</span>
+          <span style="font-size:0.75rem; background:rgba(197,160,89,0.15); color:var(--accent-gold); padding:3px 8px; border-radius:4px; font-weight:800;">GSTIN INVOICE ELIGIBLE</span>
+        </div>
+
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600; line-height: 1.2; margin-bottom: 8px;">${p.name}</h3>
+        <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 14px;">${p.desc}</p>
+
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom: 14px;">
+          <span style="font-size: 1.7rem; font-weight: 800; color: var(--text-dark);">₹${p.price}</span>
+          <span style="font-size:0.85rem; color:#64748b; font-weight:600;">/ Sample Unit (Listed at ₹0)</span>
+        </div>
+
+        <!-- B2B Tiered Volume Pricing Table -->
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:14px;">
+          <div style="font-size:0.75rem; font-weight:800; color:#475569; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">⚡ Wholesale B2B Volume Rates:</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; text-align:center; font-size:0.78rem;">
+            <div style="background:#fff; padding:6px; border-radius:4px; border:1px solid #cbd5e1;">
+              <div style="font-weight:700; color:#334155;">1 - 9 Units</div>
+              <div style="color:var(--accent-gold); font-weight:800;">₹0 / Unit</div>
+            </div>
+            <div style="background:#fff; padding:6px; border-radius:4px; border:1px solid #cbd5e1;">
+              <div style="font-weight:700; color:#334155;">10 - 49 Units</div>
+              <div style="color:var(--accent-gold); font-weight:800;">₹0 / Unit</div>
+            </div>
+            <div style="background:rgba(197,160,89,0.12); padding:6px; border-radius:4px; border:1px solid var(--accent-gold);">
+              <div style="font-weight:800; color:#000;">50+ Bulk Rate</div>
+              <div style="color:var(--accent-gold); font-weight:800;">₹0 / Unit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Pincode Checker -->
+        <div style="margin-bottom:14px;">
+          <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#64748b; display:block; margin-bottom:4px;">🚚 Check Delivery Pincode:</label>
+          <div style="display:flex; gap:8px;">
+            <input type="text" id="pincodeCheckInput" placeholder="Enter 6-digit Pincode (e.g. 208004)" maxlength="6" style="flex:1; padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
+            <button onclick="checkPincodeDelivery()" style="padding:8px 14px; background:#0f172a; color:#fff; border:none; border-radius:4px; font-weight:700; font-size:0.8rem; cursor:pointer;">Check</button>
+          </div>
+          <div id="pincodeResultText" style="font-size:0.8rem; margin-top:4px; font-weight:600;"></div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <button class="btn-editorial btn-gold" style="width: 100%;" onclick="addToCart('${p.id}'); closeQuickView();">ADD TO SHOPPING BAG &rarr;</button>
+          <button onclick="openSampleModal('${p.id}')" style="width:100%; padding:9px; background:#ffffff; border:1px solid var(--text-dark); color:var(--text-dark); border-radius:4px; font-weight:800; font-size:0.82rem; cursor:pointer;">🎁 REQUEST FREE B2B SAMPLE</button>
+        </div>
       </div>
     </div>
   `;
@@ -979,6 +1216,95 @@ function openQuickView(productId) {
 function closeQuickView() {
   const modal = document.getElementById('quickViewModal');
   if (modal) modal.classList.remove('active');
+}
+
+function updateCustomLogoPreview(val) {
+  const box = document.getElementById('customLogoPreviewBox');
+  if (box) {
+    if (val.trim().length > 0) {
+      box.style.display = 'block';
+      box.textContent = val.toUpperCase() + ' • ALPHABET PRINT';
+    } else {
+      box.style.display = 'none';
+    }
+  }
+}
+
+function checkPincodeDelivery() {
+  const input = document.getElementById('pincodeCheckInput');
+  const res = document.getElementById('pincodeResultText');
+  if (!input || !res) return;
+  const pin = input.value.trim();
+  if (/^\d{6}$/.test(pin)) {
+    res.style.color = '#16a34a';
+    res.innerHTML = `✓ Express Freight Delivery Available for Pincode ${pin}! Estimated arrival by 26th September.`;
+  } else {
+    res.style.color = '#ef4444';
+    res.innerHTML = `Please enter a valid 6-digit postal pincode.`;
+  }
+}
+
+// Free Sample Request Modal System
+function openSampleModal(productId) {
+  closeQuickView();
+  const p = PRODUCTS_DATA.find(item => item.id === productId) || PRODUCTS_DATA[0];
+  let sampleModal = document.getElementById('sampleRequestModal');
+  if (!sampleModal) {
+    const div = document.createElement('div');
+    div.className = 'modal-overlay';
+    div.id = 'sampleRequestModal';
+    div.innerHTML = `
+      <div class="modal-box" style="max-width: 520px;">
+        <button class="modal-close-x" onclick="closeSampleModal()">✕</button>
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 6px;">Request Free B2B Sample</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">For corporate procurement officers & enterprise buyers.</p>
+        
+        <form onsubmit="handleSampleSubmit(event)">
+          <input type="hidden" id="sampleProdId" value="${p.id}">
+          <div style="margin-bottom:12px;">
+            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Selected Product Sample</label>
+            <input type="text" id="sampleProdTitle" readonly value="${p.name}" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px; background:#f8fafc; font-weight:700;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Company / School Name *</label>
+            <input type="text" required placeholder="Organization Name" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px;">
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div>
+              <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Mobile Number *</label>
+              <input type="tel" required placeholder="Phone / WhatsApp" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px;">
+            </div>
+            <div>
+              <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">GSTIN (Optional)</label>
+              <input type="text" placeholder="GST Number" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px;">
+            </div>
+          </div>
+          <div style="margin-bottom:18px;">
+            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Dispatch Delivery Address *</label>
+            <textarea required rows="2" placeholder="Full Factory / Office Address..." style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px;"></textarea>
+          </div>
+          <button type="submit" class="btn-editorial btn-gold" style="width:100%;">CONFIRM FREE SAMPLE DISPATCH &rarr;</button>
+        </form>
+      </div>
+    `;
+    document.body.appendChild(div);
+    sampleModal = div;
+  } else {
+    document.getElementById('sampleProdTitle').value = p.name;
+    document.getElementById('sampleProdId').value = p.id;
+  }
+  sampleModal.classList.add('active');
+}
+
+function closeSampleModal() {
+  const modal = document.getElementById('sampleRequestModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function handleSampleSubmit(e) {
+  e.preventDefault();
+  alert("Thank you! Your Free B2B Sample request has been registered. Our Kanpur logistics unit will dispatch the sample box shortly.");
+  closeSampleModal();
 }
 
 // Checkout Modal
@@ -1018,6 +1344,11 @@ function renderCheckoutSummary() {
   `;
 }
 
+function toggleGstInputs(checked) {
+  const box = document.getElementById('gstFieldsBox');
+  if (box) box.style.display = checked ? 'block' : 'none';
+}
+
 function handleCheckoutSubmit(e) {
   e.preventDefault();
 
@@ -1026,6 +1357,10 @@ function handleCheckoutSubmit(e) {
   const phone = document.getElementById('chkPhone').value;
   const address = document.getElementById('chkAddress').value;
   const payment = document.querySelector('input[name="chkPayment"]:checked').value;
+  
+  const isGst = document.getElementById('chkGstToggle') ? document.getElementById('chkGstToggle').checked : false;
+  const companyName = isGst && document.getElementById('chkCompanyName') ? document.getElementById('chkCompanyName').value : '';
+  const buyerGst = isGst && document.getElementById('chkGstNumber') ? document.getElementById('chkGstNumber').value : '';
 
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
   const gst = Math.round(subtotal * 0.18);
@@ -1033,7 +1368,7 @@ function handleCheckoutSubmit(e) {
   const orderId = 'ALPH-' + Math.floor(100000 + Math.random() * 900000);
 
   const orderData = {
-    orderId, name, email, phone, address, payment, items: [...cart], subtotal, gst, total, timestamp: new Date().toLocaleString()
+    orderId, name, email, phone, address, payment, isGst, companyName, buyerGst, items: [...cart], subtotal, gst, total, timestamp: new Date().toLocaleString()
   };
 
   cart = [];
@@ -1057,51 +1392,99 @@ function showOrderReceipt(order) {
       </div>
       <p style="font-size:0.8rem; color:var(--text-sub); margin-bottom:4px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
       <div style="font-size:0.8rem; color:var(--text-sub);">GSTIN: <strong>09DHOPM9732B1ZZ</strong> | PAN: <strong>DHOPM9732B</strong></div>
-      <div style="font-weight:800; color:var(--accent-gold); margin-top:8px;">Official Order ID: ${order.orderId}</div>
+      <div style="font-weight:800; color:var(--accent-gold); margin-top:8px;">Official ${order.isGst ? 'Tax Invoice' : 'Order Receipt'}: ${order.orderId}</div>
     </div>
 
     <div style="font-size:0.88rem; margin-bottom:16px;">
       <p><strong>Customer:</strong> ${order.name}</p>
+      ${order.isGst && order.companyName ? `<p style="color:var(--accent-gold);"><strong>B2B Firm:</strong> ${order.companyName} | <strong>GSTIN:</strong> ${order.buyerGst || 'N/A'}</p>` : ''}
       <p><strong>Phone:</strong> ${order.phone} | <strong>Email:</strong> ${order.email}</p>
       <p><strong>Shipping Address:</strong> ${order.address}</p>
       <p><strong>Payment Mode:</strong> <span style="text-transform:uppercase; font-weight:700;">${order.payment}</span></p>
     </div>
 
-    <table style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:16px;">
-      <thead>
-        <tr style="background:var(--bg-body); text-align:left;">
-          <th style="padding:8px;">Item</th>
-          <th style="padding:8px;">Qty</th>
-          <th style="padding:8px; text-align:right;">Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${order.items.map(i => `
-          <tr style="border-bottom:1px solid var(--border-light);">
-            <td style="padding:8px;">${i.name}</td>
-            <td style="padding:8px;">${i.qty}</td>
-            <td style="padding:8px; text-align:right;">₹${i.price * i.qty}</td>
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-
-    <div style="font-size:1.1rem; font-weight:800; text-align:right;">
-      Grand Total: ₹${order.total.toLocaleString('en-IN')}
+    <div style="border-top:1px solid var(--border-light); padding-top:12px; margin-bottom:16px;">
+      <div style="font-weight:700; font-size:0.9rem; margin-bottom:8px;">Items Summary:</div>
+      ${order.items.map(i => `<div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:4px;"><span>${i.name} (x${i.qty})</span><span>₹${i.price * i.qty}</span></div>`).join('')}
+      <div style="display:flex; justify-content:space-between; font-size:0.95rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:8px; margin-top:8px;">
+        <span>Total Payable:</span>
+        <span>₹${order.total.toLocaleString('en-IN')}</span>
+      </div>
     </div>
   `;
 
-  document.getElementById('receiptWhatsAppBtn').onclick = () => {
-    const text = encodeURIComponent(`Order Confirmed! ALPHABET CORPORATION\nOrder ID: ${order.orderId}\nCustomer: ${order.name}\nPhone: ${order.phone}\nTotal Amount: ₹${order.total}`);
-    window.open(`https://wa.me/919667501707?text=${text}`, '_blank');
-  };
-
   modal.classList.add('active');
-}
 
+  const waBtn = document.getElementById('receiptWhatsAppBtn');
+  if (waBtn) {
+    waBtn.onclick = () => {
+      let text = `Hello ALPHABET CORPORATION! I have placed an order.\n\n*Order ID:* ${order.orderId}\n*Name:* ${order.name}\n`;
+      if (order.isGst && order.companyName) {
+        text += `*Firm Name:* ${order.companyName}\n*GSTIN:* ${order.buyerGst}\n`;
+      }
+      text += `*Phone:* ${order.phone}\n*Address:* ${order.address}\n\n*Items:* \n`;
+      order.items.forEach(i => text += `- ${i.name} (Qty: ${i.qty})\n`);
+      text += `\n*Total Payable:* ₹${order.total}`;
+
+      window.open(`https://wa.me/919667501707?text=${encodeURIComponent(text)}`, '_blank');
+    };
 function closeReceipt() {
   const modal = document.getElementById('receiptModal');
   if (modal) modal.classList.remove('active');
+}
+
+// Order Tracking System
+function openTrackOrderModal() {
+  let modal = document.getElementById('trackOrderModal');
+  if (!modal) {
+    const div = document.createElement('div');
+    div.className = 'modal-overlay';
+    div.id = 'trackOrderModal';
+    div.innerHTML = `
+      <div class="modal-box" style="max-width: 480px;">
+        <button class="modal-close-x" onclick="closeTrackOrderModal()">✕</button>
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 6px;">Track Your Shipment</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Enter your official Order ID or Mobile Number to trace your dispatch status.</p>
+        
+        <form onsubmit="handleTrackOrderSubmit(event)">
+          <div style="margin-bottom:14px;">
+            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Order ID / Mobile Number *</label>
+            <input type="text" id="trackInputVal" required placeholder="e.g. ALPH-98214 or +91 9667501707" style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:4px;">
+          </div>
+          <button type="submit" class="btn-editorial btn-gold" style="width:100%;">TRACK SHIPMENT NOW &rarr;</button>
+        </form>
+        <div id="trackResultBox" style="margin-top:16px; display:none;"></div>
+      </div>
+    `;
+    document.body.appendChild(div);
+    modal = div;
+  }
+  modal.classList.add('active');
+}
+
+function closeTrackOrderModal() {
+  const modal = document.getElementById('trackOrderModal');
+  if (modal) modal.classList.remove('active');
+}
+
+function handleTrackOrderSubmit(e) {
+  e.preventDefault();
+  const val = document.getElementById('trackInputVal').value.trim();
+  const box = document.getElementById('trackResultBox');
+  if (!box) return;
+
+  box.style.display = 'block';
+  box.innerHTML = `
+    <div style="padding:14px; background:#f8fafc; border:1px solid var(--accent-gold); border-radius:8px; font-size:0.88rem;">
+      <div style="font-weight:800; color:var(--accent-gold); margin-bottom:4px;">📦 SHIPMENT STATUS: DISPATCHED</div>
+      <p style="margin-bottom:6px;">Order Ref: <strong>\${val}</strong></p>
+      <p style="color:#64748b; font-size:0.82rem; margin-bottom:8px;">Location: Kanpur Industrial Dispatch Hub &bull; Express Surface Freight</p>
+      <div style="background:#e2e8f0; height:6px; border-radius:3px; overflow:hidden;">
+        <div style="background:var(--accent-gold); width:75%; height:100%;"></div>
+      </div>
+      <div style="font-size:0.75rem; font-weight:700; text-align:right; margin-top:4px; color:#334155;">Out for Delivery</div>
+    </div>
+  `;
 }
 
 // Event Listeners Setup
