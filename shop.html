@@ -184,60 +184,73 @@
     </div>
   </div>
 
-  <!-- Corporate Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col brand-col">
-        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:48px; width:auto; margin-bottom:16px;">
-        <p style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.6; margin-bottom: 20px;">
-          ALPHABET CORPORATION is a premier manufacturer and bulk distributor of luxury stationery, A4 copier paper reams, office registers, and custom packaging solutions.
-        </p>
-        <div style="font-size:0.85rem; color:#cccccc;">
-          <p style="margin-bottom:4px;">GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></p>
-          <p>PAN: <strong style="color:var(--accent-gold);">DHOPM9732B</strong></p>
+  <!-- Premium Dark Footer -->
+  <footer class="site-footer-dark" id="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Col -->
+        <div>
+          <div style="display:inline-flex; align-items:center; margin-bottom:16px;">
+            <img src="Asset/brand_footer_logo.png" alt="ALPHABET CORPORATION" style="height:48px; width:auto; max-width:240px; object-fit:contain;">
+          </div>
+          <p style="font-size: 0.88rem; line-height: 1.7; color: #94a3b8; max-width: 320px; margin-bottom: 16px;">
+            ALPHABET CORPORATION is India's premier B2B manufacturer and bulk distributor of corporate office stationery, A4 copier paper reams, corporate gifting combos, and custom industrial packaging solutions.
+          </p>
+          <div style="font-size:0.85rem; color:#cbd5e1;">
+            <p style="margin-bottom:4px;">GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></p>
+            <p>PAN: <strong style="color:var(--accent-gold);">DHOPM9732B</strong></p>
+          </div>
+        </div>
+
+        <!-- Col 1: SHOP CATALOG -->
+        <div>
+          <h4 class="footer-col-head">SHOP CATALOG</h4>
+          <ul class="footer-links-list">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="office.html">Office Essentials</a></li>
+            <li><a href="stationery.html">Stationery Hub</a></li>
+            <li><a href="shop.html?cat=gifting">Corporate Gifting &amp; Combos</a></li>
+            <li><a href="packaging.html">Packaging Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: CUSTOMER SERVICE -->
+        <div>
+          <h4 class="footer-col-head">CUSTOMER SERVICE</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Shipping &amp; Delivery</a></li>
+            <li><a href="contact.html">Returns &amp; Refunds</a></li>
+            <li><a href="javascript:void(0)" onclick="openTrackOrderModal()">Track Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: COMPANY -->
+        <div>
+          <h4 class="footer-col-head">COMPANY</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About ALPHABET</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: CONTACT & HQ -->
+        <div>
+          <h4 class="footer-col-head">CONTACT &amp; HQ</h4>
+          <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 6px;"><strong>Mobile:</strong> +91 9667501707</p>
+          <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 6px;"><strong>Email:</strong> sales@alphabetcorporation.in</p>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin-top:8px; line-height:1.5;">Plant &amp; HQ: 679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop Catalog</a></li>
-          <li><a href="stationery.html">Stationery Hub</a></li>
-          <li><a href="office.html">Office Essentials</a></li>
-          <li><a href="school.html">School Supplies</a></li>
-          <li><a href="packaging.html">Packaging Solutions</a></li>
-          <li><a href="about.html">About Company</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Categories</h4>
-        <ul>
-          <li><a href="stationery.html">Linen Hardcover Journals</a></li>
-          <li><a href="stationery.html">Executive Planners 2026</a></li>
-          <li><a href="office.html">A4 Copier Paper (80 GSM)</a></li>
-          <li><a href="packaging.html">BOPP Clear Packaging Tapes</a></li>
-          <li><a href="packaging.html">Custom Printed Logo Tapes</a></li>
-          <li><a href="packaging.html">Corrugated Shipping Boxes</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Kanpur Corporate Office</h4>
-        <div style="font-size: 0.88rem; color: #a0a0a0; line-height: 1.6;">
-          <p style="margin-bottom: 8px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
-          <p style="margin-bottom: 8px;">Helpline: <strong style="color:#fff;">+91 9667501707</strong></p>
-          <p>Email: <strong style="color:#fff;">sales@alphabetcorporation.in</strong></p>
+      <div class="footer-bottom-bar">
+        <div>Copyright &copy; 2026 <strong>ALPHABET CORPORATION</strong>. All Rights Reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <span>Instagram</span>
+          <span>LinkedIn</span>
+          <span>WhatsApp</span>
         </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-        <p>&copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</p>
-        <p style="font-size:0.8rem; color:var(--accent-gold);">Kanpur Manufacturing &amp; Wholesale Unit</p>
       </div>
     </div>
   </footer>

@@ -2560,4 +2560,99 @@ img, svg, video, iframe {
     font-size: 0.88rem;
   }
 }
+
+/* ==========================================================================
+   High-End Editorial Luxury Dark Footer System
+   ========================================================================== */
+.site-footer, .site-footer-dark {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+  padding: 70px 0 30px 0 !important;
+  border-top: 2px solid var(--accent-gold) !important;
+  position: relative !important;
+  clear: both !important;
+  width: 100% !important;
 }
+
+.footer-top-grid, .footer-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 1.5fr !important;
+  gap: 32px !important;
+  margin-bottom: 40px !important;
+}
+
+.footer-col-head {
+  font-family: var(--font-sans) !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: var(--accent-gold) !important;
+  margin-bottom: 16px !important;
+  display: block !important;
+}
+
+.footer-links-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.footer-links-list li a {
+  color: #94a3b8 !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  display: inline-block !important;
+}
+
+.footer-links-list li a:hover {
+  color: var(--accent-gold) !important;
+  transform: translateX(4px) !important;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-top: 24px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  font-size: 0.82rem !important;
+  color: #64748b !important;
+}
+
+.footer-bottom-bar strong {
+  color: var(--accent-gold) !important;
+}
+
+@media (max-width: 992px) {
+  .footer-top-grid, .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer, .site-footer-dark {
+    padding: 40px 0 20px 0 !important;
+  }
+  .footer-top-grid, .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px 14px !important;
+  }
+  .footer-top-grid > div:first-child, .footer-grid > div:first-child {
+    grid-column: 1 / -1 !important;
+  }
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+}
+

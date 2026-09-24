@@ -12,6 +12,82 @@ const SVG_ICONS = {
 
 // Product Database
 const PRODUCTS_DATA = [
+  // 0. Corporate Gifting & Stationery Combos
+  {
+    id: 'prod-gifting-1',
+    name: 'Executive Corporate Gift Set (Planner + Brass Pen + Card Holder)',
+    category: 'gifting',
+    categoryName: 'Corporate Gifting & Combos',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 340,
+    colors: ['#c5a059', '#111111'],
+    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80',
+    tag: 'Corporate Combo',
+    desc: 'Bespoke corporate gifting box featuring a gold foil leatherette 2026 planner, solid brass fountain pen, and metal card holder in a luxury rigid gift box.'
+  },
+  {
+    id: 'prod-gifting-2',
+    name: 'Luxury Leatherette Desk Organizer & Stationery Combo Kit',
+    category: 'gifting',
+    categoryName: 'Corporate Gifting & Combos',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 215,
+    colors: ['#111111', '#2e4057'],
+    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80',
+    tag: 'Executive Gift',
+    desc: 'Complete C-suite desk accessory kit including memo block holder, pen stand, leatherette coaster set, and letter opener.'
+  },
+  {
+    id: 'prod-gifting-3',
+    name: 'Enterprise Employee Onboarding Welcome Kit Combo',
+    category: 'gifting',
+    categoryName: 'Corporate Gifting & Combos',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 480,
+    colors: ['#c5a059', '#111111'],
+    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80',
+    tag: 'Best Seller',
+    desc: 'Custom logo printed welcome box with A5 hardcover notebook, gel pen, insulated stainless bottle, and lanyard badge holder.'
+  },
+  {
+    id: 'prod-gifting-4',
+    name: 'Premium A4 Copier Paper & Office Registrar Bundle',
+    category: 'gifting',
+    categoryName: 'Corporate Gifting & Combos',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.8,
+    reviewsCount: 195,
+    colors: ['#ffffff'],
+    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    tag: 'Bulk Combo',
+    desc: 'Bulk office procurement bundle containing 5 reams of 80GSM A4 paper and 2 hardbound master accounts registers.'
+  },
+  {
+    id: 'prod-gifting-5',
+    name: 'Custom Branded Corporate Stationery Gift Box',
+    category: 'gifting',
+    categoryName: 'Corporate Gifting & Combos',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 160,
+    colors: ['#c5a059'],
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+    tag: 'Custom Gift',
+    desc: 'Customized B2B gifting box with UV-printed company logo on all items for festive gifting & enterprise milestones.'
+  },
   // 1. Books & Notebooks
   {
     id: 'prod-1',
