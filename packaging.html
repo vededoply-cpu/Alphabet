@@ -33,7 +33,7 @@
 
       <!-- Right Header Action Icons -->
       <div class="header-right-icons">
-        <button class="icon-btn-header" onclick="document.getElementById('searchInput').focus()" title="Search Products" aria-label="Search">
+        <button class="icon-btn-header" onclick="openSearchOverlay()" title="Search Products" aria-label="Search">
           <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
         <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
@@ -154,6 +154,43 @@
     </div>
     <div class="footer-bottom"><div class="container"><p>&copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</p></div></div>
   </footer>
+
+  <!-- Universal User-Friendly Live Search Overlay Modal -->
+  <div class="search-overlay-backdrop" id="searchOverlayModal" onclick="closeSearchOverlay(event)">
+    <div class="search-overlay-card" onclick="event.stopPropagation()">
+      <div class="search-overlay-header">
+        <div class="search-input-wrapper">
+          <svg class="search-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="headerSearchInput" placeholder="Search stationery, A4 paper, packaging tapes, boxes..." autocomplete="off" oninput="handleHeaderSearchInput()">
+          <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearHeaderSearch()" style="display:none;" title="Clear Search">✕</button>
+        </div>
+        <button class="search-close-x" onclick="closeSearchOverlay()" title="Close Search (ESC)">✕</button>
+      </div>
+
+      <!-- Quick Trending Tags -->
+      <div class="search-quick-tags-box" id="searchQuickTagsBox">
+        <span class="quick-tag-label">POPULAR SEARCHES:</span>
+        <div class="quick-tags-list">
+          <button class="quick-tag-btn" onclick="setSearchQuery('A4 Copier Paper')">A4 Copier Paper</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('BOPP Packaging Tape')">BOPP Clear Tape</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('Corrugated Box')">Corrugated Box</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('Stapler')">Stapler Set</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('Marker')">Permanent Markers</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('L-Folder')">L-Folder Sleeves</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('Geometry Box')">Geometry Box</button>
+          <button class="quick-tag-btn" onclick="setSearchQuery('Courier Bag')">Courier Bags</button>
+        </div>
+      </div>
+
+      <!-- Live Search Results Grid / List -->
+      <div class="search-results-container" id="searchResultsContainer">
+        <!-- Rendered dynamically by alpha.js -->
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

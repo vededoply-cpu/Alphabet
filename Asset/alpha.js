@@ -1455,11 +1455,127 @@ function attachGlobalImageClickZoom() {
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeImageLightbox();
+  if (e.key === 'Escape') {
+    closeImageLightbox();
+    closeSearchOverlay();
+  }
 });
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', attachGlobalImageClickZoom);
 } else {
   attachGlobalImageClickZoom();
+}
+
+/* Interactive Header Search Overlay Engine */
+function openSearchOverlay() {
+  const modal = document.getElementById('searchOverlayModal');
+  const input = document.getElementById('headerSearchInput');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (input) {
+      setTimeout(() => {
+        input.focus();
+        input.select();
+      }, 100);
+      handleHeaderSearchInput();
+    }
+  }
+}
+
+function closeSearchOverlay(e) {
+  if (e && e.target && !e.target.classList.contains('search-overlay-backdrop') && !e.target.classList.contains('search-close-x')) {
+    return;
+  }
+  const modal = document.getElementById('searchOverlayModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function clearHeaderSearch() {
+  const input = document.getElementById('headerSearchInput');
+  const clearBtn = document.getElementById('searchClearBtn');
+  if (input) {
+    input.value = '';
+    input.focus();
+    if (clearBtn) clearBtn.style.display = 'none';
+    handleHeaderSearchInput();
+  }
+}
+
+function setSearchQuery(query) {
+  const input = document.getElementById('headerSearchInput');
+  if (input) {
+    input.value = query;
+    input.focus();
+    handleHeaderSearchInput();
+  }
+}
+
+function handleHeaderSearchInput() {
+  const input = document.getElementById('headerSearchInput');
+  const clearBtn = document.getElementById('searchClearBtn');
+  const resultsContainer = document.getElementById('searchResultsContainer');
+  if (!input || !resultsContainer) return;
+
+  const query = input.value.trim().toLowerCase();
+  if (clearBtn) {
+    clearBtn.style.display = query.length > 0 ? 'flex' : 'none';
+  }
+
+  let filtered = PRODUCTS_DATA;
+  if (query.length > 0) {
+    filtered = PRODUCTS_DATA.filter(p => {
+      return p.name.toLowerCase().includes(query) ||
+        p.categoryName.toLowerCase().includes(query) ||
+        p.category.toLowerCase().includes(query) ||
+        (p.desc && p.desc.toLowerCase().includes(query)) ||
+        (p.tag && p.tag.toLowerCase().includes(query));
+    });
+  }
+
+  if (filtered.length === 0) {
+    resultsContainer.innerHTML = `
+      <div class="search-no-results">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <p style="font-size:1.1rem; font-weight:700; color:var(--text-dark); margin-bottom:6px;">No products found for "${input.value}"</p>
+        <p style="font-size:0.9rem;">Try searching for "A4 Paper", "BOPP Tape", "Box", "Stapler", or "Marker".</p>
+      </div>
+    `;
+    return;
+  }
+
+  let html = `
+    <div class="search-result-count-bar">
+      <span>${query ? `Search Results (${filtered.length})` : `All Catalogue Products (${filtered.length})`}</span>
+      <span style="font-size:0.75rem; color:#94a3b8;">Click item to open Quick View</span>
+    </div>
+    <div class="search-results-list">
+  `;
+
+  filtered.forEach(item => {
+    html += `
+      <div class="search-result-item" onclick="openQuickView('${item.id}'); closeSearchOverlay();">
+        <img src="${item.image}" alt="${item.name}" class="search-item-thumb">
+        <div class="search-item-info">
+          <div class="search-item-category">${item.categoryName}</div>
+          <div class="search-item-title">${item.name}</div>
+          <div class="search-item-desc">${item.desc || ''}</div>
+        </div>
+        <div class="search-item-action">
+          <div class="search-item-price">₹${item.price.toLocaleString('en-IN')}</div>
+          <button class="search-add-btn" onclick="event.stopPropagation(); addToCart('${item.id}');">ADD TO BAG</button>
+        </div>
+      </div>
+    `;
+  });
+
+  html += `</div>`;
+  resultsContainer.innerHTML = html;
 }
