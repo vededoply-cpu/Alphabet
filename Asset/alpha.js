@@ -1030,6 +1030,45 @@ function renderNewArrivals() {
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
+function renderStationeryCollection() {
+  const container = document.getElementById('stationeryCollectionGrid');
+  if (!container) return;
+  const list = PRODUCTS_DATA.filter(p => p.category === 'books' || p.category === 'pens');
+  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
+}
+
+function renderOfficeCollection() {
+  const container = document.getElementById('officeCollectionGrid');
+  if (!container) return;
+  const list = PRODUCTS_DATA.filter(p => p.category === 'office');
+  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
+}
+
+function renderSchoolCollection() {
+  const container = document.getElementById('schoolCollectionGrid');
+  if (!container) return;
+  const list = PRODUCTS_DATA.filter(p => (p.tag && p.tag.toLowerCase().includes('school')) || p.category === 'books');
+  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
+}
+
+function renderShopPage() {
+  const container = document.getElementById('shopCollectionGrid');
+  if (!container) return;
+  const list = getFilteredProducts();
+  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
+}
+
+function renderAllProductSections() {
+  renderMainCollection();
+  renderBestSellers();
+  renderPackagingCollection();
+  renderNewArrivals();
+  renderStationeryCollection();
+  renderOfficeCollection();
+  renderSchoolCollection();
+  renderShopPage();
+}
+
 // Shopping Cart Actions
 function addToCart(productId) {
   const p = PRODUCTS_DATA.find(item => item.id === productId);
@@ -1145,12 +1184,12 @@ function openQuickView(productId) {
       <div>
         <div style="position:relative; overflow:hidden; border-radius: var(--radius-md); border:1px solid var(--border-light); background:#fff; text-align:center;">
           <img src="${p.image}" alt="${p.name}" id="qvMainImage" style="width: 100%; height: 320px; object-fit: contain; padding: 12px; cursor: zoom-in;" onclick="openImageLightbox('${p.image}', '${p.name}')" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
-          <div style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:12px; font-size:0.75rem; pointer-events:none;">🔍 Click Image to Zoom HD</div>
+          <div style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:12px; font-size:0.75rem; pointer-events:none;">Click Image to Zoom HD</div>
         </div>
 
         ${isCustomizable ? `
           <div style="margin-top:14px; padding:12px; background:#f8fafc; border-radius:8px; border:1px dashed var(--accent-gold);">
-            <label style="font-size:0.78rem; font-weight:800; color:var(--text-dark); text-transform:uppercase; display:block; margin-bottom:4px;">🎨 Custom Brand Logo / Text Preview:</label>
+            <label style="font-size:0.78rem; font-weight:800; color:var(--text-dark); text-transform:uppercase; display:block; margin-bottom:4px;">Custom Brand Logo / Text Preview:</label>
             <input type="text" placeholder="Type your company name / logo text..." oninput="updateCustomLogoPreview(this.value)" style="width:100%; padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
             <div id="customLogoPreviewBox" style="margin-top:8px; padding:8px; background:var(--accent-gold); color:#000; font-weight:800; text-align:center; border-radius:4px; font-size:0.9rem; letter-spacing:1px; display:none;">
               [YOUR LOGO HERE]
@@ -1175,7 +1214,7 @@ function openQuickView(productId) {
 
         <!-- B2B Tiered Volume Pricing Table -->
         <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; margin-bottom:14px;">
-          <div style="font-size:0.75rem; font-weight:800; color:#475569; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">⚡ Wholesale B2B Volume Rates:</div>
+          <div style="font-size:0.75rem; font-weight:800; color:#475569; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px;">Wholesale B2B Volume Rates:</div>
           <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; text-align:center; font-size:0.78rem;">
             <div style="background:#fff; padding:6px; border-radius:4px; border:1px solid #cbd5e1;">
               <div style="font-weight:700; color:#334155;">1 - 9 Units</div>
@@ -1194,7 +1233,7 @@ function openQuickView(productId) {
 
         <!-- Delivery Pincode Checker -->
         <div style="margin-bottom:14px;">
-          <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#64748b; display:block; margin-bottom:4px;">🚚 Check Delivery Pincode:</label>
+          <label style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#64748b; display:block; margin-bottom:4px;">Check Delivery Pincode:</label>
           <div style="display:flex; gap:8px;">
             <input type="text" id="pincodeCheckInput" placeholder="Enter 6-digit Pincode (e.g. 208004)" maxlength="6" style="flex:1; padding:8px 12px; border:1px solid #cbd5e1; border-radius:4px; font-size:0.85rem;">
             <button onclick="checkPincodeDelivery()" style="padding:8px 14px; background:#0f172a; color:#fff; border:none; border-radius:4px; font-weight:700; font-size:0.8rem; cursor:pointer;">Check</button>
@@ -1204,7 +1243,7 @@ function openQuickView(productId) {
 
         <div style="display:flex; flex-direction:column; gap:8px;">
           <button class="btn-editorial btn-gold" style="width: 100%;" onclick="addToCart('${p.id}'); closeQuickView();">ADD TO SHOPPING BAG &rarr;</button>
-          <button onclick="openSampleModal('${p.id}')" style="width:100%; padding:9px; background:#ffffff; border:1px solid var(--text-dark); color:var(--text-dark); border-radius:4px; font-weight:800; font-size:0.82rem; cursor:pointer;">🎁 REQUEST FREE B2B SAMPLE</button>
+          <button onclick="openSampleModal('${p.id}')" style="width:100%; padding:9px; background:#ffffff; border:1px solid var(--text-dark); color:var(--text-dark); border-radius:4px; font-weight:800; font-size:0.82rem; cursor:pointer;">REQUEST FREE B2B SAMPLE</button>
         </div>
       </div>
     </div>
@@ -1428,6 +1467,9 @@ function showOrderReceipt(order) {
 
       window.open(`https://wa.me/919667501707?text=${encodeURIComponent(text)}`, '_blank');
     };
+  }
+}
+
 function closeReceipt() {
   const modal = document.getElementById('receiptModal');
   if (modal) modal.classList.remove('active');
@@ -1476,7 +1518,7 @@ function handleTrackOrderSubmit(e) {
   box.style.display = 'block';
   box.innerHTML = `
     <div style="padding:14px; background:#f8fafc; border:1px solid var(--accent-gold); border-radius:8px; font-size:0.88rem;">
-      <div style="font-weight:800; color:var(--accent-gold); margin-bottom:4px;">📦 SHIPMENT STATUS: DISPATCHED</div>
+      <div style="font-weight:800; color:var(--accent-gold); margin-bottom:4px;">SHIPMENT STATUS: DISPATCHED</div>
       <p style="margin-bottom:6px;">Order Ref: <strong>\${val}</strong></p>
       <p style="color:#64748b; font-size:0.82rem; margin-bottom:8px;">Location: Kanpur Industrial Dispatch Hub &bull; Express Surface Freight</p>
       <div style="background:#e2e8f0; height:6px; border-radius:3px; overflow:hidden;">
