@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ALPHABET CORPORATION Manufacturing</title>
+  <meta name="description" content="Learn about ALPHABET CORPORATION - Kanpur based manufacturer of luxury stationery, A4 copier paper reams, BOPP packaging tapes, and custom printed shipping boxes.">
+  <meta name="keywords" content="ALPHABET company, Kanpur paper plant, packaging tape manufacturer, stationery factory India, GSTIN 09DHOPM9732B1ZZ">
+  
+  <link rel="stylesheet" href="Asset/alpha.css">
+  <script src="Asset/alpha.js" defer></script>
+</head>
+<body>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
+      </a>
+
+      <!-- Main Editorial Navigation -->
+      <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item-link">HOME</a>
+        <a href="shop.html" class="nav-item-link">SHOP</a>
+        <a href="stationery.html" class="nav-item-link">STATIONERY</a>
+        <a href="office.html" class="nav-item-link">OFFICE</a>
+        <a href="school.html" class="nav-item-link">SCHOOL</a>
+        <a href="packaging.html" class="nav-item-link">PACKAGING</a>
+        <a href="about.html" class="nav-item-link active">ABOUT</a>
+        <a href="contact.html" class="nav-item-link">CONTACT</a>
+      </nav>
+
+      <!-- Right Header Action Icons -->
+      <div class="header-right-icons">
+        <button class="icon-btn-header" onclick="document.getElementById('searchInput').focus()" title="Search Products" aria-label="Search">
+          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count" id="wishlistBadgeCount">0</span>
+        </button>
+        <button class="icon-btn-header" onclick="openCheckoutModal()" title="User Account" aria-label="User Account">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button class="icon-btn-header" id="cartBtnHeader" title="Shopping Bag" aria-label="Shopping Bag">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerOverlay">
+    <div class="slide-drawer">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="drawer-close-btn" id="closeCartDrawer">✕</button>
+      </div>
+      <div class="drawer-body" id="cartDrawerBody"></div>
+      <div class="drawer-footer">
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.95rem;"><span>Subtotal:</span><strong id="cartSubtotalText">₹0</strong></div>
+        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:10px; margin-bottom:20px;"><span>Total:</span><strong id="cartTotalText">₹0</strong></div>
+        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="openCheckoutModal()">PROCEED TO CHECKOUT &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Editorial Banner -->
+    <section style="background: var(--bg-dark); color: #ffffff; padding: 90px 0; position: relative; overflow: hidden;">
+      <div style="position: absolute; inset:0; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover; opacity: 0.22;"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-gold); display: block; margin-bottom: 12px;">ALPHABET CORPORATION &bull; Manufacturing &amp; Industrial Scale</span>
+        <h1 style="font-family: var(--font-serif); font-size: 4rem; font-weight: 500; margin-bottom: 16px;">ALPHABET CORPORATION</h1>
+        <p style="font-size: 1.15rem; color: #dddddd; max-width: 760px; line-height: 1.7;">
+          ALPHABET CORPORATION is a pioneering Indian industrial manufacturer and wholesale enterprise of fine paper stationery, 80 GSM A4 copier paper reams, industrial BOPP tapes, and custom corrugated packaging solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Manufacturing Story & Facilities -->
+    <section style="padding: 90px 0; background: var(--bg-white);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 90px;">
+          <div>
+            <span class="section-subtitle-tag">Kanpur Manufacturing Unit</span>
+            <h2 class="section-title-editorial" style="margin-bottom: 20px;">ENGINEERED FOR PRECISION &amp; SCALE</h2>
+            <div class="gold-divider" style="margin-left:0; margin-bottom: 24px;"></div>
+            <p style="font-size: 1.05rem; color: var(--text-sub); line-height: 1.8; margin-bottom: 18px;">
+              Located at <strong>679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</strong>, ALPHABET CORPORATION operates state-of-the-art paper slitting, flexographic printing, and corrugated box die-cutting infrastructure.
+            </p>
+            <p style="font-size: 1rem; color: var(--text-sub); line-height: 1.8; margin-bottom: 24px;">
+              From 100 GSM acid-free fountain pen paper for our fine linen journals to 48-micron high-tack BOPP clear packaging tape rolls, every product undergoes rigorous quality testing before reaching corporate clients across India.
+            </p>
+
+            <div style="display: flex; gap: 32px; padding-top: 16px; border-top: 1px solid var(--border-light);">
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--accent-gold);">38+</div>
+                <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Product Lines</div>
+              </div>
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--text-dark);">100%</div>
+                <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Jam-Free A4 Paper</div>
+              </div>
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; color: var(--accent-gold);">ISO</div>
+                <div style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase;">Quality Standard</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="position: relative;">
+            <img src="Asset/boxes_stack.jpg" alt="Kanpur Plant Facility" style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-lg);">
+            <div style="position: absolute; bottom: -24px; left: -24px; background: var(--text-dark); color: #fff; padding: 24px; border-radius: 8px; max-width: 280px; box-shadow: var(--shadow-md);">
+              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--accent-gold); margin-bottom: 6px;">GSTIN Registered</h4>
+              <p style="font-size: 0.85rem; color: #ccc;">09DHOPM9732B1ZZ<br>PAN: DHOPM9732B</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Pillars Grid -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+          <div style="background: var(--bg-body); padding: 32px 24px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+            <div style="width: 50px; height: 50px; background: var(--accent-gold); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.2rem;">01</div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 10px;">Direct Factory Pricing</h4>
+            <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">Eliminating middlemen to provide transparent bulk quote pricing for enterprises and retail buyers.</p>
+          </div>
+
+          <div style="background: var(--bg-body); padding: 32px 24px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+            <div style="width: 50px; height: 50px; background: var(--text-dark); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.2rem;">02</div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 10px;">Custom Logo Printing</h4>
+            <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">High-precision 4-color flexo logo printing on BOPP packaging tapes and custom corrugated boxes.</p>
+          </div>
+
+          <div style="background: var(--bg-body); padding: 32px 24px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+            <div style="width: 50px; height: 50px; background: var(--accent-gold); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.2rem;">03</div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 10px;">Eco Cushioning</h4>
+            <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">100% biodegradable honeycomb structured kraft paper rolls and recyclable fluted mailers.</p>
+          </div>
+
+          <div style="background: var(--bg-body); padding: 32px 24px; border-radius: 8px; border: 1px solid var(--border-light); text-align: center;">
+            <div style="width: 50px; height: 50px; background: var(--text-dark); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.2rem;">04</div>
+            <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 10px;">Fast Dispatch</h4>
+            <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.6;">Pan-India logistics and direct dispatch for bulk office ream cartons and industrial tapes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="quickViewModal"><div class="modal-box modal-lg"><button class="modal-close-btn" onclick="closeQuickView()">✕</button><div id="quickViewContent"></div></div></div>
+  <div class="modal-overlay" id="checkoutModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button><form id="checkoutForm"><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Full Name *</label><input type="text" id="chkName" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Email *</label><input type="email" id="chkEmail" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Phone *</label><input type="tel" id="chkPhone" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 16px;"><label style="font-size: 0.8rem; font-weight: 700;">Address *</label><textarea id="chkAddress" rows="3" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></textarea></div><div style="margin-bottom: 20px;"><label style="font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 6px;">Payment Mode</label><label style="margin-right: 16px; font-size: 0.85rem;"><input type="radio" name="chkPayment" value="invoice" checked> Bank Transfer / Proforma</label><label style="font-size: 0.85rem;"><input type="radio" name="chkPayment" value="cod"> Sample COD</label></div><div id="checkoutSummaryBox" style="background: var(--bg-body); padding: 14px; margin-bottom: 20px;"></div><button type="submit" class="btn-editorial btn-gold" style="width: 100%;">CONFIRM INVOICE</button></form></div></div>
+  <div class="modal-overlay" id="receiptModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeReceipt()">✕</button><div id="receiptContent"></div><div style="margin-top: 20px; display: flex; gap: 12px;"><button class="btn-editorial btn-gold" style="flex:1;" id="receiptWhatsAppBtn">SEND TO WHATSAPP</button><button class="btn-editorial btn-outline-white" style="flex:1; background:var(--text-dark); color:#fff;" onclick="window.print()">PRINT INVOICE</button></div></div></div>
+
+  <!-- Corporate Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col"><img src="Asset/brand_header_logo.png" alt="ALPHABET" style="height:48px; width:auto; margin-bottom:16px;"><p style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.6; margin-bottom: 20px;">ALPHABET CORPORATION - Kanpur manufacturing plant.</p><div style="font-size:0.85rem; color:#cccccc;"><p style="margin-bottom:4px;">GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></p><p>PAN: <strong style="color:var(--accent-gold);">DHOPM9732B</strong></p></div></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop Catalog</a></li><li><a href="stationery.html">Stationery Hub</a></li><li><a href="office.html">Office Essentials</a></li><li><a href="school.html">School Supplies</a></li><li><a href="packaging.html">Packaging Solutions</a></li><li><a href="about.html">About Company</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Kanpur Plant</h4><div style="font-size: 0.88rem; color: #a0a0a0; line-height: 1.6;"><p style="margin-bottom: 8px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p><p style="margin-bottom: 8px;">Helpline: <strong style="color:#fff;">+91 9667501707</strong></p><p>Email: <strong style="color:#fff;">sales@alphabetcorporation.in</strong></p></div></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</p></div></div>
+  </footer>
+
+</body>
+</html>

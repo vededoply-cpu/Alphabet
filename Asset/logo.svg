@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="100%" height="100%">
+  <!-- Left Emblem Group -->
+  <g transform="translate(40, 20)">
+    <!-- White / Outer Circle Ring -->
+    <path d="M 200,210 A 110,110 0 1,0 240,150" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" />
+    
+    <!-- Stylized Letter 'A' -->
+    <path d="M 135,45 L 70,200 L 98,200 L 135,110 L 168,185 L 115,185 L 102,208 L 180,208 L 200,200 L 235,200 Z" fill="#FFFFFF" />
+    <!-- Right leg extension into circle gap -->
+    <path d="M 155,155 L 220,240 L 242,240 L 175,155 Z" fill="#FFFFFF" />
+    
+    <!-- Red Leaf Accent -->
+    <path d="M 70,200 C 78,175 115,170 130,175 C 110,195 90,205 70,200 Z" fill="#E50914" />
+    
+    <!-- Inner 'CORPORATION' Subtext under crossbar -->
+    <text x="135" y="200" font-family="'Inter', sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">CORPORATION</text>
+  </g>
+
+  <!-- Right Geometric Wordmark 'ALPHΛBET' -->
+  <g fill="#FFFFFF" transform="translate(320, 190)">
+    <!-- A -->
+    <path d="M 0,0 L 32,-110 L 46,-110 L 78,0 L 56,0 L 39,-58 L 39,-58 L 22,0 Z" />
+    <!-- L -->
+    <path d="M 90,-110 H 112 V -20 H 155 V 0 H 90 Z" />
+    <!-- P -->
+    <path d="M 170,-110 H 220 C 242,-110 255,-98 255,-77 C 255,-56 242,-44 220,-44 H 192 V 0 H 170 Z M 192,-90 V -64 H 218 C 228,-64 233,-70 233,-77 C 233,-84 228,-90 218,-90 Z" />
+    <!-- H -->
+    <path d="M 270,-110 H 292 V -64 H 338 V -110 H 360 V 0 H 338 V -44 H 292 V 0 H 270 Z" />
+    <!-- A (Chevron style Λ) -->
+    <path d="M 375,0 L 407,-110 L 421,-110 L 453,0 L 431,0 L 414,-58 L 397,0 Z" />
+    <!-- B -->
+    <path d="M 468,-110 H 515 C 532,-110 543,-101 543,-88 C 543,-78 536,-71 525,-67 C 538,-63 546,-54 546,-40 C 546,-24 532,-110 514,0 H 468 Z M 490,-91 V -67 H 512 C 518,-67 522,-71 522,-79 C 522,-86 518,-91 512,-91 Z M 490,-49 V -20 H 514 C 522,-20 525,-25 525,-34 C 525,-43 522,-49 514,-49 Z" />
+    <!-- E -->
+    <path d="M 560,-110 H 622 V -90 H 582 V -65 H 616 V -46 H 582 V -20 H 624 V 0 H 560 Z" />
+    <!-- T -->
+    <path d="M 635,-110 H 705 V -90 H 681 V 0 H 659 V -90 H 635 Z" />
+  </g>
+</svg>

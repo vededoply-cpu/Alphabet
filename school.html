@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School & Academic Stationery | ALPHABET CORPORATION</title>
+  <meta name="description" content="ALPHABET school and student stationery - practical science record books, lab manuals, precision geometry math compass sets, mechanical pencils, erasers, and art paint sets.">
+  <meta name="keywords" content="ALPHABET school stationery, practical lab manual, geometry box, mechanical pencil, polymer eraser, watercolor paint set">
+  
+  <link rel="stylesheet" href="Asset/alpha.css">
+  <script src="Asset/alpha.js" defer></script>
+</head>
+<body>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
+      </a>
+
+      <!-- Main Editorial Navigation -->
+      <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item-link">HOME</a>
+        <a href="shop.html" class="nav-item-link">SHOP</a>
+        <a href="stationery.html" class="nav-item-link">STATIONERY</a>
+        <a href="office.html" class="nav-item-link">OFFICE</a>
+        <a href="school.html" class="nav-item-link active">SCHOOL</a>
+        <a href="packaging.html" class="nav-item-link">PACKAGING</a>
+        <a href="about.html" class="nav-item-link">ABOUT</a>
+        <a href="contact.html" class="nav-item-link">CONTACT</a>
+      </nav>
+
+      <!-- Right Header Action Icons -->
+      <div class="header-right-icons">
+        <button class="icon-btn-header" onclick="document.getElementById('searchInput').focus()" title="Search Products" aria-label="Search">
+          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count" id="wishlistBadgeCount">0</span>
+        </button>
+        <button class="icon-btn-header" onclick="openCheckoutModal()" title="User Account" aria-label="User Account">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button class="icon-btn-header" id="cartBtnHeader" title="Shopping Bag" aria-label="Shopping Bag">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerOverlay">
+    <div class="slide-drawer">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="drawer-close-btn" id="closeCartDrawer">✕</button>
+      </div>
+      <div class="drawer-body" id="cartDrawerBody"></div>
+      <div class="drawer-footer">
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.95rem;"><span>Subtotal:</span><strong id="cartSubtotalText">₹0</strong></div>
+        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:10px; margin-bottom:20px;"><span>Total:</span><strong id="cartTotalText">₹0</strong></div>
+        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="openCheckoutModal()">PROCEED TO CHECKOUT &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Banner -->
+    <section style="background: var(--bg-dark); color: #ffffff; padding: 80px 0; position: relative; overflow: hidden;">
+      <div style="position: absolute; inset:0; background: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1920&q=80') center/cover; opacity: 0.28;"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-gold); display: block; margin-bottom: 12px;">ALPHABET CORPORATION &bull; Academic Manufacturing &amp; STEM Supplies</span>
+        <h1 style="font-family: var(--font-serif); font-size: 3.8rem; font-weight: 500; margin-bottom: 16px;">ALPHABET CORPORATION SCHOOL ESSENTIALS</h1>
+        <p style="font-size: 1.1rem; color: #dddddd; max-width: 720px; line-height: 1.7;">
+          Engineered by ALPHABET CORPORATION for educational institutions, schools, and colleges - practical science lab experiment books, metal geometry boxes, drafting pencils, polymer erasers, and rich pigment art supplies.
+        </p>
+      </div>
+    </section>
+
+    <!-- School Gallery -->
+    <section style="padding: 70px 0; background: var(--bg-white);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Academic Collection</span>
+          <h2 class="section-title-editorial">STUDENT &amp; LAB GALLERY</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px;">
+          <div style="border-radius: 8px; overflow: hidden; height: 300px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80" alt="Lab Manual" style="width:100%; height:100%; object-fit:cover;">
+            <div style="position: absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%); padding:20px; display:flex; flex-direction:column; justify-content:flex-end; color:#fff;">
+              <h3 style="font-family:var(--font-serif); font-size:1.4rem;">Practical Science Lab Manuals</h3>
+              <p style="font-size:0.85rem; color:#ddd;">physics, Chemistry &amp; Biology 200 Pages</p>
+            </div>
+          </div>
+
+          <div style="border-radius: 8px; overflow: hidden; height: 300px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Geometry Box" style="width:100%; height:100%; object-fit:cover;">
+            <div style="position: absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%); padding:20px; display:flex; flex-direction:column; justify-content:flex-end; color:#fff;">
+              <h3 style="font-family:var(--font-serif); font-size:1.4rem;">Precision Geometry Tin Box</h3>
+              <p style="font-size:0.85rem; color:#ddd;">Die-Cast Compass &amp; 30cm Steel Scale</p>
+            </div>
+          </div>
+
+          <div style="border-radius: 8px; overflow: hidden; height: 300px; position: relative;">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Artist Paints" style="width:100%; height:100%; object-fit:cover;">
+            <div style="position: absolute; inset:0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.8) 100%); padding:20px; display:flex; flex-direction:column; justify-content:flex-end; color:#fff;">
+              <h3 style="font-family:var(--font-serif); font-size:1.4rem;">Artist Acrylic Paint Set</h3>
+              <p style="font-size:0.85rem; color:#ddd;">12 Colors &bull; Synthetic Hair Brushes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- School Grid -->
+        <div class="product-grid-4col" id="schoolGrid">
+          <!-- Rendered dynamically by alpha.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="quickViewModal"><div class="modal-box modal-lg"><button class="modal-close-btn" onclick="closeQuickView()">✕</button><div id="quickViewContent"></div></div></div>
+  <div class="modal-overlay" id="checkoutModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button><form id="checkoutForm"><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Full Name *</label><input type="text" id="chkName" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Email *</label><input type="email" id="chkEmail" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Phone *</label><input type="tel" id="chkPhone" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 16px;"><label style="font-size: 0.8rem; font-weight: 700;">Address *</label><textarea id="chkAddress" rows="3" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></textarea></div><div style="margin-bottom: 20px;"><label style="font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 6px;">Payment Mode</label><label style="margin-right: 16px; font-size: 0.85rem;"><input type="radio" name="chkPayment" value="invoice" checked> Bank Transfer / Proforma</label><label style="font-size: 0.85rem;"><input type="radio" name="chkPayment" value="cod"> Sample COD</label></div><div id="checkoutSummaryBox" style="background: var(--bg-body); padding: 14px; margin-bottom: 20px;"></div><button type="submit" class="btn-editorial btn-gold" style="width: 100%;">CONFIRM INVOICE</button></form></div></div>
+  <div class="modal-overlay" id="receiptModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeReceipt()">✕</button><div id="receiptContent"></div><div style="margin-top: 20px; display: flex; gap: 12px;"><button class="btn-editorial btn-gold" style="flex:1;" id="receiptWhatsAppBtn">SEND TO WHATSAPP</button><button class="btn-editorial btn-outline-white" style="flex:1; background:var(--text-dark); color:#fff;" onclick="window.print()">PRINT INVOICE</button></div></div></div>
+
+  <!-- Corporate Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col"><img src="Asset/brand_header_logo.png" alt="ALPHABET" style="height:48px; width:auto; margin-bottom:16px;"><p style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.6; margin-bottom: 20px;">ALPHABET CORPORATION - Educational and school stationery manufacturer.</p><div style="font-size:0.85rem; color:#cccccc;"><p style="margin-bottom:4px;">GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></p><p>PAN: <strong style="color:var(--accent-gold);">DHOPM9732B</strong></p></div></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop Catalog</a></li><li><a href="stationery.html">Stationery Hub</a></li><li><a href="office.html">Office Essentials</a></li><li><a href="school.html">School Supplies</a></li><li><a href="packaging.html">Packaging Solutions</a></li><li><a href="about.html">About Company</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Kanpur Plant</h4><div style="font-size: 0.88rem; color: #a0a0a0; line-height: 1.6;"><p style="margin-bottom: 8px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p><p style="margin-bottom: 8px;">Helpline: <strong style="color:#fff;">+91 9667501707</strong></p><p>Email: <strong style="color:#fff;">sales@alphabetcorporation.in</strong></p></div></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</p></div></div>
+  </footer>
+
+</body>
+</html>

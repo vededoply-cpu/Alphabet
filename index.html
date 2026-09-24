@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPHABET CORPORATION | B2B Manufacturer & Wholesale Supplier</title>
+  <meta name="description" content="ALPHABET CORPORATION - India's premier industrial manufacturer and wholesale supplier of fine stationery, corporate office supplies, school materials, and custom e-commerce packaging solutions.">
+  <meta name="keywords" content="ALPHABET CORPORATION, ALPHABET corporation stationery, B2B paper manufacturer, office supplies wholesale, BOPP packaging tape, corrugated boxes India">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="Asset/alpha.css">
+  
+  <!-- JavaScript Engine -->
+  <script src="Asset/alpha.js" defer></script>
+</head>
+<body>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
+      </a>
+
+      <!-- Main Editorial Navigation -->
+      <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item-link active">HOME</a>
+        <a href="shop.html" class="nav-item-link">SHOP</a>
+        <a href="stationery.html" class="nav-item-link">STATIONERY</a>
+        <a href="office.html" class="nav-item-link">OFFICE</a>
+        <a href="school.html" class="nav-item-link">SCHOOL</a>
+        <a href="packaging.html" class="nav-item-link">PACKAGING</a>
+        <a href="about.html" class="nav-item-link">ABOUT</a>
+        <a href="contact.html" class="nav-item-link">CONTACT</a>
+      </nav>
+
+      <!-- Right Header Action Icons -->
+      <div class="header-right-icons">
+        <button class="icon-btn-header" onclick="document.getElementById('searchInput').focus()" title="Search Products" aria-label="Search">
+          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count" id="wishlistBadgeCount">0</span>
+        </button>
+        <div class="user-account-menu-wrapper" id="userAccountMenuWrapper">
+          <button class="header-login-btn" onclick="openAuthModal('login')">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="user-name-label" id="headerUserName">Login</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="header-user-dropdown" id="headerUserDropdown">
+            <div class="dropdown-header-box" id="dropdownHeaderGuest">
+              <p>New customer?</p>
+              <a href="javascript:void(0)" onclick="openAuthModal('signup')">Sign Up</a>
+            </div>
+            <div class="dropdown-header-box hidden" id="dropdownHeaderUser">
+              <p>Welcome back,</p>
+              <strong id="dropdownUserDisplayName">User</strong>
+            </div>
+            <ul class="dropdown-links-list">
+              <li>
+                <a href="javascript:void(0)" onclick="openAuthModal('login')">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  My Profile
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="openCheckoutModal()">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+                  My Orders
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="openCartDrawer()">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                  Wishlist
+                </a>
+              </li>
+              <li id="logoutDropdownItem" class="hidden">
+                <a href="javascript:void(0)" onclick="handleLogout()" style="color:#ef4444;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="icon-btn-header" id="cartBtnHeader" title="Shopping Bag" aria-label="Shopping Bag">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-Over Shopping Bag / Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerOverlay">
+    <div class="slide-drawer">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="drawer-close-btn" id="closeCartDrawer">✕</button>
+      </div>
+
+      <div class="drawer-body" id="cartDrawerBody">
+        <!-- Rendered dynamically by alpha.js -->
+      </div>
+
+      <div class="drawer-footer">
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.95rem;">
+          <span>Subtotal:</span>
+          <strong id="cartSubtotalText">₹0</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:10px; margin-bottom:20px;">
+          <span>Total:</span>
+          <strong id="cartTotalText">₹0</strong>
+        </div>
+        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="openCheckoutModal()">PROCEED TO CHECKOUT &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Editorial Page Structure -->
+  <main id="home">
+    
+    <!-- 1. Hero Multi-Slide Interactive Carousel -->
+    <section class="hero-slider-section">
+      <!-- Slide 1: Fine Stationery -->
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1920&q=85');">
+        <div class="container">
+          <div class="hero-content-box">
+            <div class="hero-tagline">ALPHABET CORPORATION &bull; B2B MANUFACTURER &amp; WHOLESALE HUB</div>
+            <h1 class="hero-main-title">ALPHABET CORPORATION</h1>
+            <p class="hero-description">
+              India's premier industrial manufacturer &amp; wholesale supplier of fine stationery, corporate office supplies, school materials, and heavy-duty custom packaging solutions.
+            </p>
+            <div class="hero-cta-buttons">
+              <a href="#collection" class="btn-editorial btn-gold">SHOP B2B CATALOGUE</a>
+              <a href="#categories" class="btn-editorial btn-outline-white">EXPLORE CATEGORIES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: BOPP Transparent Packaging Tape Spotlight -->
+      <div class="hero-slide" style="background-image: url('Asset/bopp_clear_tape.jpg');">
+        <div class="container">
+          <div class="hero-content-box">
+            <div class="hero-tagline">Industrial &amp; Packaging Spotlight</div>
+            <h1 class="hero-main-title">BOPP CLEAR PACKAGING TAPE ROLL</h1>
+            <p class="hero-description">
+              High-tensile clear BOPP packaging tape engineered for heavy-duty carton sealing, 48mm width, 65m length, 48-micron film with instant tack water-based acrylic adhesive. Available in bulk &amp; custom widths.
+            </p>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
+              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Roll (Sample Roll)</span>
+            </div>
+            <div class="hero-cta-buttons">
+              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP PACKAGING TAPE</a>
+              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-9')">ADD TO BAG &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Heavy-Duty Corrugated Shipping Boxes Stack -->
+      <div class="hero-slide" style="background-image: url('Asset/boxes_stack.jpg');">
+        <div class="container">
+          <div class="hero-content-box">
+            <div class="hero-tagline">Logistics &amp; Wholesale Packaging</div>
+            <h1 class="hero-main-title">HEAVY-DUTY CORRUGATED PACKAGING BOXES</h1>
+            <p class="hero-description">
+              Multi-depth 3-ply &amp; 5-ply Kraft corrugated shipping boxes with high bursting strength, superior stackability, and heavy load resistance for wholesale dispatch &amp; e-commerce freight.
+            </p>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
+              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Box)</span>
+            </div>
+            <div class="hero-cta-buttons">
+              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP SHIPPING BOXES</a>
+              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-13')">ADD TO BAG &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Self-Locking Master Packaging Carton -->
+      <div class="hero-slide" style="background-image: url('Asset/corrugated_box.png');">
+        <div class="container">
+          <div class="hero-content-box">
+            <div class="hero-tagline">Custom E-Commerce Packaging</div>
+            <h1 class="hero-main-title">SELF-LOCKING MASTER PACKAGING CARTON</h1>
+            <p class="hero-description">
+              Precision die-cut self-locking master packaging box featuring double-walled crush protection, clean telescoping lid closure, and smooth natural kraft paper finish for premium unboxing.
+            </p>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
+              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Carton)</span>
+            </div>
+            <div class="hero-cta-buttons">
+              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP MASTER CARTONS</a>
+              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-11')">ADD TO BAG &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Custom Branding & Printed Tapes -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1920&q=85');">
+        <div class="container">
+          <div class="hero-content-box">
+            <div class="hero-tagline">Custom Branding &amp; E-Commerce</div>
+            <h1 class="hero-main-title">CUSTOM PRINTED TAPES &amp; BRANDED BOXES</h1>
+            <p class="hero-description">
+              Elevate your brand unboxing experience with custom logo printed packaging tapes, self-locking mailer boxes, and security courier flyer bags.
+            </p>
+            <div class="hero-cta-buttons">
+              <a href="#packaging-section" class="btn-editorial btn-gold">CUSTOM PACKAGING</a>
+              <a href="#collection" class="btn-editorial btn-outline-white">BROWSE STORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Arrow Controls -->
+      <button class="hero-nav-arrow prev" onclick="prevHeroSlide()" aria-label="Previous Slide">&lsaquo;</button>
+      <button class="hero-nav-arrow next" onclick="nextHeroSlide()" aria-label="Next Slide">&rsaquo;</button>
+
+      <!-- Carousel Dot Pagination -->
+      <div class="hero-dots-container">
+        <span class="hero-dot active" onclick="goToHeroSlide(0)"></span>
+        <span class="hero-dot" onclick="goToHeroSlide(1)"></span>
+        <span class="hero-dot" onclick="goToHeroSlide(2)"></span>
+        <span class="hero-dot" onclick="goToHeroSlide(3)"></span>
+        <span class="hero-dot" onclick="goToHeroSlide(4)"></span>
+      </div>
+    </section>
+
+    <!-- 2. Dual Side-by-Side Promotional Cards -->
+    <section class="promotional-cards-section">
+      <div class="container">
+        <div class="promo-cards-grid">
+          <!-- Card 1 -->
+          <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80');">
+            <div class="promo-card-content">
+              <span class="promo-card-subtitle">Essential Collection</span>
+              <h2 class="promo-card-title">EVERYDAY STATIONERY</h2>
+              <p class="promo-card-desc">Essential stationery for school, work and everyday creativity crafted with fine archival paper.</p>
+              <a href="#collection" class="btn-editorial btn-gold">SHOP NOW</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80');">
+            <div class="promo-card-content">
+              <span class="promo-card-subtitle">Industrial &amp; Retail</span>
+              <h2 class="promo-card-title">PACKAGING SOLUTIONS</h2>
+              <p class="promo-card-desc">Reliable BOPP tapes, die-cut boxes, courier flyer bags and packaging essentials for businesses.</p>
+              <a href="#packaging-section" class="btn-editorial btn-gold">EXPLORE PACKAGING</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Shop by Category Visual Cards -->
+    <section class="category-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Curated Ranges</span>
+          <h2 class="section-title-editorial">SHOP BY CATEGORY</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'books\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80" alt="Books & Notebooks"></div>
+            <h3 class="category-card-name">Books &amp; Notebooks</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'pens\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=400&q=80" alt="Pens & Writing"></div>
+            <h3 class="category-card-name">Pens &amp; Writing</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="location.href='#school-office';">
+            <div class="category-img-wrapper"><img src="Asset/geometry_box.jpg" alt="School Stationery"></div>
+            <h3 class="category-card-name">School Stationery</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'office\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=400&q=80" alt="Office Stationery"></div>
+            <h3 class="category-card-name">Office Stationery</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'office\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="Asset/a4_copier_paper.png" alt="A4 Paper"></div>
+            <h3 class="category-card-name">A4 Paper</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="location.href='#collection';">
+            <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80" alt="Art & Craft"></div>
+            <h3 class="category-card-name">Art &amp; Craft</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'packaging\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="Asset/bopp_clear_tape.jpg" alt="Tapes & Adhesives"></div>
+            <h3 class="category-card-name">Tapes &amp; Adhesives</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'packaging\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="Asset/corrugated_box.png" alt="Packaging Boxes"></div>
+            <div class="category-card-name">Packaging Boxes</div>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'packaging\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="Asset/kraft_courier_bags.png" alt="Courier Bags"></div>
+            <h3 class="category-card-name">Courier Bags</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+
+          <div class="category-visual-card" onclick="document.querySelector('[data-cat=\'packaging\']').click(); location.href='#collection';">
+            <div class="category-img-wrapper"><img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=400&q=80" alt="Packaging Tools"></div>
+            <h3 class="category-card-name">Packaging Tools</h3>
+            <span class="category-explore-link">Explore &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Products (ALPHABET COLLECTION) -->
+    <section class="product-collection-section" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Editorial Selection</span>
+          <h2 class="section-title-editorial">ALPHABET COLLECTION</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="filter-sorting-bar">
+          <div class="filter-category-pills">
+            <button class="cat-pill active" data-cat="all">All Products</button>
+            <button class="cat-pill" data-cat="books">Books &amp; Notebooks</button>
+            <button class="cat-pill" data-cat="pens">Pens &amp; Writing</button>
+            <button class="cat-pill" data-cat="office">Office Supplies</button>
+            <button class="cat-pill" data-cat="packaging">Packaging</button>
+          </div>
+
+          <div class="controls-group">
+            <input type="text" id="searchInput" class="search-input-field" placeholder="Search products...">
+            <select id="sortSelect" class="sort-select-dropdown" aria-label="Sort options">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid-4col" id="alphabetCollectionGrid">
+          <!-- Dynamically populated by alpha.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Full-Width Editorial Promotional Banner -->
+    <section class="editorial-full-banner">
+      <div class="banner-content-box">
+        <span class="section-subtitle-tag" style="color: var(--accent-gold);">Craftsmanship &amp; Order</span>
+        <h2 class="banner-editorial-title">YOUR EVERYDAY ESSENTIALS, BEAUTIFULLY ORGANIZED.</h2>
+        <p class="banner-editorial-desc">From handcrafted journals and fluid writing instruments to durable office filing and packaging supplies.</p>
+        <a href="#collection" class="btn-editorial btn-gold">VIEW ALL PRODUCTS</a>
+      </div>
+    </section>
+
+    <!-- 6. Best Sellers Section -->
+    <section class="product-collection-section" style="background: var(--bg-white);" id="bestsellers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Customer Favorites</span>
+          <h2 class="section-title-editorial">BEST SELLERS</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="product-grid-4col" id="bestSellersGrid">
+          <!-- Populated by alpha.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dedicated Packaging Collection -->
+    <section class="product-collection-section" id="packaging-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag-sub">Industrial &amp; E-Commerce</span>
+          <h2 class="section-title-editorial">PACKAGING SOLUTIONS</h2>
+          <p class="section-desc">Reliable BOPP tapes, custom printed rolls, die-cut corrugated mailers, and courier flyer security bags.</p>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="product-grid-4col" id="packagingCollectionGrid">
+          <!-- Populated by alpha.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. School & Office Dual Split Section -->
+    <section class="dual-split-section" id="school-office">
+      <div class="container">
+        <div class="split-grid">
+          <!-- FOR SCHOOL -->
+          <div class="split-box">
+            <div class="split-content">
+              <span class="split-subtitle">Academic Essentials</span>
+              <h3 class="split-title">FOR SCHOOL</h3>
+              <ul class="split-list">
+                <li>Books &amp; Registers</li>
+                <li>Notebooks &amp; Drawing Pads</li>
+                <li>Pens &amp; Pencils</li>
+                <li>Art &amp; Craft Materials</li>
+              </ul>
+              <a href="#collection" class="btn-editorial btn-outline-dark" onclick="document.querySelector('[data-cat=\'books\']').click()">SHOP SCHOOL</a>
+            </div>
+            <div class="split-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80" alt="For School">
+            </div>
+          </div>
+
+          <!-- FOR OFFICE -->
+          <div class="split-box">
+            <div class="split-content">
+              <span class="split-subtitle">Corporate &amp; Workspace</span>
+              <h3 class="split-title">FOR OFFICE</h3>
+              <ul class="split-list">
+                <li>A4 Copier Paper Reams</li>
+                <li>Files &amp; Folders</li>
+                <li>Desk Stationery</li>
+                <li>Archive Supplies</li>
+              </ul>
+              <a href="#collection" class="btn-editorial btn-outline-dark" onclick="document.querySelector('[data-cat=\'office\']').click()">SHOP OFFICE</a>
+            </div>
+            <div class="split-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80" alt="For Office">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. New Arrivals Section -->
+    <section class="product-collection-section" style="background: var(--bg-white);" id="new-arrivals">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Fresh Releases</span>
+          <h2 class="section-title-editorial">NEW ARRIVALS</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="product-grid-4col" id="newArrivalsGrid">
+          <!-- Populated by alpha.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Why Alphabet Pillars (0% Emojis, 100% Vector SVG) -->
+    <section class="why-alphabet-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">Our Promise</span>
+          <h2 class="section-title-editorial">WHY ALPHABET</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h5>Quality Products</h5>
+            <p>Crafted with premium archival paper and materials.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h5>Wide Range</h5>
+            <p>Complete stationery, office, school &amp; packaging catalog.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <h5>Easy Online Shopping</h5>
+            <p>Intuitive shopping bag and fast checkouts.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h5>Secure Payments</h5>
+            <p>Encrypted UPI, Cards, NetBanking &amp; Invoices.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h5>Fast Delivery</h5>
+            <p>Reliable dispatch across India.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">
+              <svg class="svg-icon-lg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h5>Reliable Support</h5>
+            <p>Dedicated customer support &amp; WhatsApp service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Brand Story Section -->
+    <section class="brand-story-section" id="brand-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-img-box">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80" alt="ALPHABET CORPORATION Brand Story">
+          </div>
+          <div class="story-content">
+            <span class="section-subtitle-tag">ALPHABET CORPORATION &bull; Enterprise Brand Story</span>
+            <h3>ALPHABET CORPORATION - INDUSTRIAL MANUFACTURING &amp; WHOLESALE EXCELLENCE</h3>
+            <p>ALPHABET CORPORATION is an established Indian corporate manufacturer and wholesale supplier operating from Kanpur, Uttar Pradesh. Specializing in high-tensile BOPP packaging tapes, corrugated shipping cartons, 80 GSM copier paper, and archival stationery, we combine precision industrial engineering with nationwide enterprise distribution.</p>
+            <p>Whether you are procuring corporate office reams, stocking academic school supplies, or scaling e-commerce logistics, ALPHABET CORPORATION delivers high-volume production backed by strict quality compliance (GSTIN: 09DHOPM9732B1ZZ).</p>
+            <a href="#collection" class="btn-editorial btn-gold">DISCOVER ALPHABET CORPORATION</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Corporate Contact & Official Details Section -->
+    <section class="corporate-contact-section" id="contact" style="padding: 80px 0; background: var(--bg-card); border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle-tag">ALPHABET CORPORATION Headquarters</span>
+          <h2 class="section-title-editorial">ALPHABET CORPORATION - CORPORATE HQ &amp; B2B DIRECT INQUIRIES</h2>
+          <div class="gold-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 40px;">
+          <!-- Corporate Card 1: Address & Location -->
+          <div style="background: var(--bg-body); padding: 32px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <div style="margin-bottom:20px;">
+              <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:56px; width:auto; max-width:100%; object-fit:contain; border-radius:4px;">
+            </div>
+            
+            <div style="font-size:0.92rem; color:var(--text-sub); line-height:1.7; margin-bottom:16px;">
+              <strong>Registered Office &amp; Factory Address:</strong><br>
+              679/1 - SEETA RAM NAGAR AHIRWAN,<br>
+              Kanpur, Kanpur Nagar, Uttar Pradesh - 208004 / 208007, India
+            </div>
+          </div>
+
+          <!-- Corporate Card 2: Business & Tax Credentials -->
+          <div style="background: var(--bg-body); padding: 32px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:16px; color:var(--text-dark);">TAX &amp; REGISTRATION DETAILS</h4>
+            
+            <div style="display:flex; flex-direction:column; gap:14px; font-size:0.92rem; color:var(--text-sub);">
+              <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:8px;">
+                <span style="font-weight:600; color:var(--text-dark);">GSTIN Identification:</span>
+                <strong style="color:var(--accent-gold); font-family:monospace; font-size:1.05rem;">09DHOPM9732B1ZZ</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-light); padding-bottom:8px;">
+                <span style="font-weight:600; color:var(--text-dark);">PAN Number:</span>
+                <strong style="color:var(--text-dark); font-family:monospace; font-size:1.05rem;">DHOPM9732B</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding-top:4px;">
+                <span style="font-weight:600; color:var(--text-dark);">Business Type:</span>
+                <span>B2B Manufacturer &amp; Wholesale Supplier</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corporate Card 3: Direct Sales & Inquiries -->
+          <div style="background: var(--bg-body); padding: 32px; border-radius: var(--radius-sm); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:16px; color:var(--text-dark);">DIRECT CONTACT &amp; ORDERS</h4>
+            
+            <div style="display:flex; flex-direction:column; gap:14px; font-size:0.92rem; color:var(--text-sub);">
+              <div>
+                <strong>Mobile Helpline:</strong><br>
+                <a href="tel:+919667501707" style="color:var(--text-dark); font-weight:800; font-size:1.15rem; text-decoration:none;">+91 9667501707</a>
+              </div>
+              <div>
+                <strong>Official Email Address:</strong><br>
+                <a href="mailto:sales@alphabetcorporation.in" style="color:var(--accent-gold); font-weight:700; text-decoration:none;">sales@alphabetcorporation.in</a>
+              </div>
+              <div>
+                <strong>Instant WhatsApp Order:</strong><br>
+                <a href="https://wa.me/919667501707" target="_blank" style="color:#25D366; font-weight:700; text-decoration:none;">Chat on WhatsApp (+91 9667501707) &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="section-subtitle-tag">Stay Connected</span>
+          <h2 class="section-title-editorial" style="font-size: 2.6rem;">STAY IN THE LOOP</h2>
+          <p class="section-desc">Get updates about new arrivals, offers and stationery collections directly to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to ALPHABET CORPORATION!'); this.reset();">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn-editorial btn-gold">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-box">
+      <button class="modal-close-x" onclick="closeQuickView()">✕</button>
+      <div id="quickViewContent">
+        <!-- Rendered by alpha.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box" style="max-width: 600px;">
+      <button class="modal-close-x" onclick="closeCheckoutModal()">✕</button>
+      <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 6px;">Secure Checkout</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">Complete your delivery details to place your order with ALPHABET CORPORATION.</p>
+
+      <div id="checkoutSummaryBox" style="background: var(--bg-body); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 20px;">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <form id="checkoutForm">
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Full Name *</label>
+          <input type="text" id="chkName" required style="width:100%; padding:10px 14px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;" placeholder="Full Name">
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px;">
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Phone Number *</label>
+            <input type="tel" id="chkPhone" required style="width:100%; padding:10px 14px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;" placeholder="Mobile / WhatsApp">
+          </div>
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Email Address *</label>
+            <input type="email" id="chkEmail" required style="width:100%; padding:10px 14px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;" placeholder="Email">
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Shipping Address *</label>
+          <textarea id="chkAddress" rows="2" required style="width:100%; padding:10px 14px; border-radius:4px; border:1px solid var(--border-light); margin-top:4px;" placeholder="Complete Address..."></textarea>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Payment Method</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
+            <label style="border:1px solid var(--border-light); padding:10px; border-radius:4px; font-size:0.85rem; font-weight:600;"><input type="radio" name="chkPayment" value="UPI / Online" checked> UPI / Online</label>
+            <label style="border:1px solid var(--border-light); padding:10px; border-radius:4px; font-size:0.85rem; font-weight:600;"><input type="radio" name="chkPayment" value="Credit/Debit Card"> Credit/Debit Card</label>
+            <label style="border:1px solid var(--border-light); padding:10px; border-radius:4px; font-size:0.85rem; font-weight:600;"><input type="radio" name="chkPayment" value="Net Banking"> Net Banking</label>
+            <label style="border:1px solid var(--border-light); padding:10px; border-radius:4px; font-size:0.85rem; font-weight:600;"><input type="radio" name="chkPayment" value="Cash on Delivery"> Cash on Delivery</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-editorial btn-gold" style="width: 100%;">PLACE ORDER NOW &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Receipt Modal -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal-box">
+      <button class="modal-close-x" onclick="closeReceipt()">✕</button>
+      <div id="receiptContent">
+        <!-- Rendered dynamically -->
+      </div>
+      <div style="display: flex; gap: 12px; margin-top: 20px;">
+        <button class="btn-editorial btn-gold" id="receiptWhatsAppBtn" style="flex: 1;">Dispatch Order to WhatsApp</button>
+        <button class="btn-editorial btn-outline-dark" onclick="window.print()">Print Receipt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flipkart-Style Split Authentication Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="flipkart-auth-card">
+      <button class="modal-close-x dark-close" onclick="closeAuthModal()">✕</button>
+      
+      <!-- Left Banner -->
+      <div class="auth-left-banner">
+        <div id="authBannerLogin">
+          <h2>Login</h2>
+          <p>Get access to your Orders, Wishlist and Recommendations</p>
+        </div>
+        <div id="authBannerSignup" class="hidden">
+          <h2>Looks like you're new here!</h2>
+          <p>Sign up with your mobile number or email to get started with ALPHABET</p>
+        </div>
+        <div class="auth-brand-illustration">
+          <img src="Asset/brand_header_logo.png" alt="ALPHABET" style="max-width: 180px; filter: brightness(0) invert(1); opacity: 0.9;">
+        </div>
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="auth-right-form">
+        <!-- LOGIN FORM -->
+        <form id="flipkartLoginForm" onsubmit="handleLoginSubmit(event)">
+          <div class="fk-input-group">
+            <input type="text" id="loginIdInput" required placeholder=" ">
+            <label for="loginIdInput">Enter Email / Mobile Number</label>
+          </div>
+          
+          <div class="fk-input-group" id="loginPasswordGroup" style="margin-top:20px;">
+            <input type="password" id="loginPasswordInput" placeholder=" ">
+            <label for="loginPasswordInput">Enter Password</label>
+          </div>
+
+          <p class="fk-disclaimer-text">
+            By continuing, you agree to ALPHABET's <a href="javascript:void(0)">Terms of Use</a> and <a href="javascript:void(0)">Privacy Policy</a>.
+          </p>
+
+          <button type="submit" class="fk-btn-primary" id="loginSubmitBtn">Request OTP / Login</button>
+          <button type="button" class="fk-btn-secondary" onclick="toggleOtpMode()" id="otpToggleBtn">Use OTP Instead</button>
+
+          <div class="fk-auth-footer-link">
+            <a href="javascript:void(0)" onclick="switchAuthTab('signup')">New to ALPHABET? Create an account</a>
+          </div>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form id="flipkartSignupForm" class="hidden" onsubmit="handleSignupSubmit(event)">
+          <div class="fk-input-group">
+            <input type="text" id="signupNameInput" required placeholder=" ">
+            <label for="signupNameInput">Full Name</label>
+          </div>
+
+          <div class="fk-input-group" style="margin-top:20px;">
+            <input type="tel" id="signupPhoneInput" required placeholder=" ">
+            <label for="signupPhoneInput">Mobile Number</label>
+          </div>
+
+          <div class="fk-input-group" style="margin-top:20px;">
+            <input type="email" id="signupEmailInput" required placeholder=" ">
+            <label for="signupEmailInput">Email Address</label>
+          </div>
+
+          <div class="fk-input-group" style="margin-top:20px;">
+            <input type="password" id="signupPasswordInput" required placeholder=" ">
+            <label for="signupPasswordInput">Set Password</label>
+          </div>
+
+          <p class="fk-disclaimer-text">
+            By continuing, you agree to ALPHABET's <a href="javascript:void(0)">Terms of Use</a> and <a href="javascript:void(0)">Privacy Policy</a>.
+          </p>
+
+          <button type="submit" class="fk-btn-primary">CONTINUE</button>
+          <button type="button" class="fk-btn-secondary" onclick="switchAuthTab('login')">Existing User? Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Dark Footer -->
+  <footer class="site-footer-dark" id="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Col -->
+        <div>
+          <div style="background:#ffffff; padding:6px 12px; border-radius:6px; display:inline-flex; align-items:center; margin-bottom:16px;">
+            <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:44px; width:auto; max-width:240px; object-fit:contain;">
+          </div>
+          <p style="font-size: 0.88rem; line-height: 1.7; color: #888888; max-width: 300px;">
+            ALPHABET CORPORATION is a professional manufacturer and wholesale supplier of fine stationery, office supplies, school materials, and custom packaging solutions.
+          </p>
+        </div>
+
+        <!-- Col 1 -->
+        <div>
+          <h4 class="footer-col-head">SHOP</h4>
+          <ul class="footer-links-list">
+            <li><a href="#collection">All Products</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#bestsellers">Best Sellers</a></li>
+            <li><a href="#categories">Stationery</a></li>
+            <li><a href="#school-office">School</a></li>
+            <li><a href="#school-office">Office</a></li>
+            <li><a href="#packaging-section">Packaging</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="footer-col-head">CUSTOMER SERVICE</h4>
+          <ul class="footer-links-list">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#contact">Shipping &amp; Delivery</a></li>
+            <li><a href="#contact">Returns &amp; Refunds</a></li>
+            <li><a href="#contact">FAQs</a></li>
+            <li><a href="#contact">Track Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="footer-col-head">COMPANY</h4>
+          <ul class="footer-links-list">
+            <li><a href="#brand-story">About ALPHABET</a></li>
+            <li><a href="#contact">Privacy Policy</a></li>
+            <li><a href="#contact">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4 class="footer-col-head">CONTACT &amp; HQ</h4>
+          <p style="font-size: 0.88rem; color: #aaaaaa; margin-bottom: 6px;"><strong>Mobile:</strong> +91 9667501707</p>
+          <p style="font-size: 0.88rem; color: #aaaaaa; margin-bottom: 6px;"><strong>Email:</strong> sales@alphabetcorporation.in</p>
+          <p style="font-size: 0.88rem; color: #aaaaaa; margin-bottom: 6px;"><strong>GSTIN:</strong> 09DHOPM9732B1ZZ</p>
+          <p style="font-size: 0.88rem; color: #aaaaaa; margin-bottom: 6px;"><strong>PAN:</strong> DHOPM9732B</p>
+          <p style="font-size: 0.85rem; color: #888888; margin-top:8px; line-height:1.5;">Address: 679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>Copyright &copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <span>Instagram</span>
+          <span>Pinterest</span>
+          <span>LinkedIn</span>
+          <span>WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

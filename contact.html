@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | ALPHABET CORPORATION Kanpur</title>
+  <meta name="description" content="Contact ALPHABET CORPORATION - Kanpur manufacturing plant address, helpline +91 9667501707, email sales@alphabetcorporation.in, GSTIN 09DHOPM9732B1ZZ.">
+  <meta name="keywords" content="ALPHABET contact, Kanpur address, packaging tape inquiry, A4 paper bulk quote, WhatsApp +919667501707">
+  
+  <link rel="stylesheet" href="Asset/alpha.css">
+  <script src="Asset/alpha.js" defer></script>
+</head>
+<body>
+
+  <!-- Sticky Luxury Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
+        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
+      </a>
+
+      <!-- Main Editorial Navigation -->
+      <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item-link">HOME</a>
+        <a href="shop.html" class="nav-item-link">SHOP</a>
+        <a href="stationery.html" class="nav-item-link">STATIONERY</a>
+        <a href="office.html" class="nav-item-link">OFFICE</a>
+        <a href="school.html" class="nav-item-link">SCHOOL</a>
+        <a href="packaging.html" class="nav-item-link">PACKAGING</a>
+        <a href="about.html" class="nav-item-link">ABOUT</a>
+        <a href="contact.html" class="nav-item-link active">CONTACT</a>
+      </nav>
+
+      <!-- Right Header Action Icons -->
+      <div class="header-right-icons">
+        <button class="icon-btn-header" onclick="document.getElementById('searchInput').focus()" title="Search Products" aria-label="Search">
+          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count" id="wishlistBadgeCount">0</span>
+        </button>
+        <button class="icon-btn-header" onclick="openCheckoutModal()" title="User Account" aria-label="User Account">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button class="icon-btn-header" id="cartBtnHeader" title="Shopping Bag" aria-label="Shopping Bag">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count" id="cartBadgeCount">0</span>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerOverlay">
+    <div class="slide-drawer">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="drawer-close-btn" id="closeCartDrawer">✕</button>
+      </div>
+      <div class="drawer-body" id="cartDrawerBody"></div>
+      <div class="drawer-footer">
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.95rem;"><span>Subtotal:</span><strong id="cartSubtotalText">₹0</strong></div>
+        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:10px; margin-bottom:20px;"><span>Total:</span><strong id="cartTotalText">₹0</strong></div>
+        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="openCheckoutModal()">PROCEED TO CHECKOUT &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Banner -->
+    <section style="background: var(--bg-dark); color: #ffffff; padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+      <div class="container" style="position: relative; z-index: 2;">
+        <span style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-gold); display: block; margin-bottom: 12px;">ALPHABET CORPORATION &bull; Corporate Headquarters &amp; Kanpur Plant</span>
+        <h1 style="font-family: var(--font-serif); font-size: 3.8rem; font-weight: 500; margin-bottom: 16px;">CONTACT ALPHABET CORPORATION</h1>
+        <p style="font-size: 1.1rem; color: #dddddd; max-width: 700px; margin: 0 auto;">
+          Connect with the sales and corporate team at ALPHABET CORPORATION for wholesale paper procurement, custom logo packaging tape quotes, and industrial B2B orders.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Cards & Form -->
+    <section style="padding: 90px 0; background: var(--bg-white);">
+      <div class="container">
+        <!-- 3 Corporate Cards -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 70px;">
+          <div style="background: var(--bg-body); padding: 36px 28px; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <div style="width: 48px; height: 48px; background: rgba(197, 160, 89, 0.15); color: var(--accent-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 10px;">Plant Address</h3>
+            <p style="font-size: 0.95rem; color: var(--text-sub); line-height: 1.6;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
+          </div>
+
+          <div style="background: var(--bg-body); padding: 36px 28px; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <div style="width: 48px; height: 48px; background: rgba(17, 17, 17, 0.1); color: var(--text-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 10px;">Legal Credentials</h3>
+            <p style="font-size: 0.95rem; color: var(--text-sub); line-height: 1.6;">
+              GSTIN: <strong style="color: var(--text-dark);">09DHOPM9732B1ZZ</strong><br>
+              PAN: <strong style="color: var(--text-dark);">DHOPM9732B</strong>
+            </p>
+          </div>
+
+          <div style="background: var(--bg-body); padding: 36px 28px; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+            <div style="width: 48px; height: 48px; background: rgba(37, 211, 102, 0.15); color: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 10px;">Direct Helpline</h3>
+            <p style="font-size: 0.95rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 10px;">
+              Phone: <strong>+91 9667501707</strong><br>
+              Email: <strong>sales@alphabetcorporation.in</strong>
+            </p>
+            <a href="https://wa.me/919667501707" target="_blank" class="btn-editorial btn-gold" style="padding: 8px 16px; font-size: 0.75rem;">CHAT ON WHATSAPP &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Direct Inquiry Form -->
+        <div style="background: var(--bg-body); padding: 50px; border-radius: 8px; border: 1px solid var(--border-light); max-width: 860px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: 36px;">
+            <span class="section-subtitle-tag">Instant Corporate Inquiry</span>
+            <h2 class="section-title-editorial" style="font-size: 2.2rem;">SEND US A MESSAGE</h2>
+            <div class="gold-divider"></div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); alert('Thank you for contacting ALPHABET CORPORATION! Our sales representative will reach out to you within 2 business hours.');">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 6px;">Your Name *</label>
+                <input type="text" required placeholder="Full Name" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-light); background: #fff;">
+              </div>
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 6px;">Company Name</label>
+                <input type="text" placeholder="Organization / Enterprise" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-light); background: #fff;">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 6px;">Email Address *</label>
+                <input type="email" required placeholder="corporate@domain.com" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-light); background: #fff;">
+              </div>
+              <div>
+                <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 6px;">Phone / WhatsApp *</label>
+                <input type="tel" required placeholder="+91 9667501707" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-light); background: #fff;">
+              </div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <label style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 6px;">Requirement Details *</label>
+              <textarea rows="4" required placeholder="Specify product quantities (e.g. 50 Cartons A4 Paper, Custom Logo Tape rolls...)" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid var(--border-light); background: #fff;"></textarea>
+            </div>
+
+            <button type="submit" class="btn-editorial btn-gold" style="width: 100%; padding: 16px;">SUBMIT CORPORATE INQUIRY &rarr;</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="quickViewModal"><div class="modal-box modal-lg"><button class="modal-close-btn" onclick="closeQuickView()">✕</button><div id="quickViewContent"></div></div></div>
+  <div class="modal-overlay" id="checkoutModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button><form id="checkoutForm"><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Full Name *</label><input type="text" id="chkName" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Email *</label><input type="email" id="chkEmail" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 12px;"><label style="font-size: 0.8rem; font-weight: 700;">Phone *</label><input type="tel" id="chkPhone" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></div><div style="margin-bottom: 16px;"><label style="font-size: 0.8rem; font-weight: 700;">Address *</label><textarea id="chkAddress" rows="3" required style="width: 100%; padding: 10px; border: 1px solid var(--border-light); margin-top: 4px;"></textarea></div><div style="margin-bottom: 20px;"><label style="font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 6px;">Payment Mode</label><label style="margin-right: 16px; font-size: 0.85rem;"><input type="radio" name="chkPayment" value="invoice" checked> Bank Transfer / Proforma</label><label style="font-size: 0.85rem;"><input type="radio" name="chkPayment" value="cod"> Sample COD</label></div><div id="checkoutSummaryBox" style="background: var(--bg-body); padding: 14px; margin-bottom: 20px;"></div><button type="submit" class="btn-editorial btn-gold" style="width: 100%;">CONFIRM INVOICE</button></form></div></div>
+  <div class="modal-overlay" id="receiptModal"><div class="modal-box"><button class="modal-close-btn" onclick="closeReceipt()">✕</button><div id="receiptContent"></div><div style="margin-top: 20px; display: flex; gap: 12px;"><button class="btn-editorial btn-gold" style="flex:1;" id="receiptWhatsAppBtn">SEND TO WHATSAPP</button><button class="btn-editorial btn-outline-white" style="flex:1; background:var(--text-dark); color:#fff;" onclick="window.print()">PRINT INVOICE</button></div></div></div>
+
+  <!-- Corporate Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col"><img src="Asset/brand_header_logo.png" alt="ALPHABET" style="height:48px; width:auto; margin-bottom:16px;"><p style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.6; margin-bottom: 20px;">ALPHABET CORPORATION - Kanpur manufacturing plant contact hub.</p><div style="font-size:0.85rem; color:#cccccc;"><p style="margin-bottom:4px;">GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></p><p>PAN: <strong style="color:var(--accent-gold);">DHOPM9732B</strong></p></div></div>
+      <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop Catalog</a></li><li><a href="stationery.html">Stationery Hub</a></li><li><a href="office.html">Office Essentials</a></li><li><a href="school.html">School Supplies</a></li><li><a href="packaging.html">Packaging Solutions</a></li><li><a href="about.html">About Company</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h4>Kanpur Plant</h4><div style="font-size: 0.88rem; color: #a0a0a0; line-height: 1.6;"><p style="margin-bottom: 8px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p><p style="margin-bottom: 8px;">Helpline: <strong style="color:#fff;">+91 9667501707</strong></p><p>Email: <strong style="color:#fff;">sales@alphabetcorporation.in</strong></p></div></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 ALPHABET CORPORATION. All Rights Reserved.</p></div></div>
+  </footer>
+
+</body>
+</html>
