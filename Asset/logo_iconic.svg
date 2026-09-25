@@ -1,7 +1,5 @@
-<svg viewBox="0 0 130 40" xmlns="http://www.w3.org/2000/svg">
-  <g fill="#FFFFFF">
-    <path d="M14 6L4 18L14 30L24 18Z" fill="none" stroke="#F59E0B" stroke-width="3"/>
-    <polygon points="14,10 8,18 14,26 20,18" fill="#F59E0B"/>
-    <text x="32" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" letter-spacing="2.5" fill="#FFFFFF">ICONIC</text>
-  </g>
+<svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
+  <path d="M14 6L4 18L14 30L24 18Z" fill="#06B6D4"/>
+  <polygon points="14,10 8,18 14,26 20,18" fill="#F59E0B"/>
+  <text x="32" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" letter-spacing="2.5" fill="#0F172A">ICONIC</text>
 </svg>

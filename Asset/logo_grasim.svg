@@ -1,7 +1,5 @@
 <svg viewBox="0 0 195 40" xmlns="http://www.w3.org/2000/svg">
-  <g fill="#FFFFFF">
-    <circle cx="16" cy="19" r="10" fill="#F59E0B"/>
-    <path d="M16 5L18.5 13.5H27.5L20 18.5L23 27L16 22L9 27L12 18.5L4.5 13.5H13.5Z" fill="#DC2626"/>
-    <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" letter-spacing="1.2" fill="#FFFFFF">GRASIM INDUSTRIES</text>
-  </g>
+  <circle cx="16" cy="19" r="10" fill="#F59E0B"/>
+  <path d="M16 5L18.5 13.5H27.5L20 18.5L23 27L16 22L9 27L12 18.5L4.5 13.5H13.5Z" fill="#DC2626"/>
+  <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" letter-spacing="1.2" fill="#7F1D1D">GRASIM INDUSTRIES</text>
 </svg>

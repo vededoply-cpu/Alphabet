@@ -2962,22 +2962,23 @@ img, svg, video, iframe {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-md);
-  color: #f1f5f9;
+  color: var(--text-dark);
   font-family: var(--font-serif);
   transition: all 0.25s ease;
   flex-shrink: 0;
   cursor: default;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 
 .client-logo-card:hover {
-  background: rgba(255, 255, 255, 0.09);
+  background: #ffffff;
   border-color: var(--accent-gold);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.2);
 }
 
 .client-logo-svg, .client-logo-img {
@@ -2999,16 +3000,16 @@ img, svg, video, iframe {
   font-weight: 800;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #0f172a;
   line-height: 1.1;
 }
 
 .client-brand-sub {
   font-size: 0.65rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #94a3b8;
+  color: #64748b;
   margin-top: 2px;
 }
 
