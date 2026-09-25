@@ -12,19 +12,19 @@ const SVG_ICONS = {
 
 // Product Database
 const PRODUCTS_DATA = [
-  // 0. Corporate Gifting & Stationery Combos
+  // 0. Corporate Gift Set
   {
     id: 'prod-gifting-1',
     name: 'Executive Corporate Gift Set (Planner + Brass Pen + Card Holder)',
     category: 'gifting',
-    categoryName: 'Corporate Gifting & Combos',
+    categoryName: 'Corporate Gift Set',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 340,
     colors: ['#c5a059', '#111111'],
-    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/executive_gift_set.jpg',
     tag: 'Corporate Combo',
     desc: 'Bespoke corporate gifting box featuring a gold foil leatherette 2026 planner, solid brass fountain pen, and metal card holder in a luxury rigid gift box.'
   },
@@ -32,14 +32,14 @@ const PRODUCTS_DATA = [
     id: 'prod-gifting-2',
     name: 'Luxury Leatherette Desk Organizer & Stationery Combo Kit',
     category: 'gifting',
-    categoryName: 'Corporate Gifting & Combos',
+    categoryName: 'Corporate Gift Set',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 215,
     colors: ['#111111', '#2e4057'],
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/executive_gift_set.jpg',
     tag: 'Executive Gift',
     desc: 'Complete C-suite desk accessory kit including memo block holder, pen stand, leatherette coaster set, and letter opener.'
   },
@@ -47,14 +47,14 @@ const PRODUCTS_DATA = [
     id: 'prod-gifting-3',
     name: 'Enterprise Employee Onboarding Welcome Kit Combo',
     category: 'gifting',
-    categoryName: 'Corporate Gifting & Combos',
+    categoryName: 'Corporate Gift Set',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 480,
     colors: ['#c5a059', '#111111'],
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/onboarding_gift_kit.jpg',
     tag: 'Best Seller',
     desc: 'Custom logo printed welcome box with A5 hardcover notebook, gel pen, insulated stainless bottle, and lanyard badge holder.'
   },
@@ -62,14 +62,14 @@ const PRODUCTS_DATA = [
     id: 'prod-gifting-4',
     name: 'Premium A4 Copier Paper & Office Registrar Bundle',
     category: 'gifting',
-    categoryName: 'Corporate Gifting & Combos',
+    categoryName: 'Corporate Gift Set',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.8,
     reviewsCount: 195,
     colors: ['#ffffff'],
-    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/a4_copier_paper.png',
     tag: 'Bulk Combo',
     desc: 'Bulk office procurement bundle containing 5 reams of 80GSM A4 paper and 2 hardbound master accounts registers.'
   },
@@ -77,109 +77,153 @@ const PRODUCTS_DATA = [
     id: 'prod-gifting-5',
     name: 'Custom Branded Corporate Stationery Gift Box',
     category: 'gifting',
-    categoryName: 'Corporate Gifting & Combos',
+    categoryName: 'Corporate Gift Set',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 160,
     colors: ['#c5a059'],
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/security_envelopes_box.png',
     tag: 'Custom Gift',
     desc: 'Customized B2B gifting box with UV-printed company logo on all items for festive gifting & enterprise milestones.'
   },
-  // 1. Books & Notebooks
+  {
+    id: 'prod-gifting-6',
+    name: 'Eco-Friendly Bamboo Corporate Gifting Combo Kit',
+    category: 'gifting',
+    categoryName: 'Corporate Gift Set',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 4.9,
+    reviewsCount: 220,
+    colors: ['#d2b48c', '#c5a059'],
+    image: 'Asset/geometry_box.jpg',
+    tag: 'Eco Gifting',
+    desc: 'Sustainable corporate gift box featuring bamboo hardcover notebook, bamboo rollerball pen, wooden 32GB USB flash drive, and desk planter.'
+  },
+  {
+    id: 'prod-gifting-7',
+    name: 'Product Lifetime Executive Leatherette Folio & Pen Combo',
+    category: 'gifting',
+    categoryName: 'Corporate Gift Set',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 310,
+    colors: ['#2e4057', '#111111'],
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Executive Folio',
+    desc: 'Bespoke conference padfolio with built-in power bank slot, magnetic closure, refillable A5 legal pad, and precision signature pen.'
+  },
+  {
+    id: 'prod-gifting-8',
+    name: 'Luxury C-Suite Gold Foil Journal & Fountain Pen Combo Box',
+    category: 'gifting',
+    categoryName: 'Corporate Gift Set',
+    price: 0,
+    mrp: 0,
+    discount: '',
+    rating: 5.0,
+    reviewsCount: 175,
+    colors: ['#c5a059'],
+    image: 'Asset/security_envelopes_box.png',
+    tag: 'C-Suite Gift',
+    desc: 'Ultra-premium Italian leatherette journal with 100GSM fountain-pen friendly pages, handcrafted brass nib pen, and satin ribbon bookmark.'
+  },
+  // 1. Office Stationery
   {
     id: 'prod-1',
     name: 'Alphabet Classic Linen Journal (Hardcover)',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 128,
     colors: ['#c5a059', '#111111', '#2e4057'],
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/l_folder_sleeves.jpg',
     tag: 'Bestseller',
     desc: 'Hand-crafted linen hardcover journal featuring 200 pages of 100GSM acid-free fountain-pen friendly paper.'
   },
   {
     id: 'prod-2',
     name: 'Minimalist Thread-Bound Executive Notebook',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.8,
     reviewsCount: 94,
     colors: ['#e2d5c3', '#111111'],
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/l_folder_sleeves.jpg',
     tag: 'New Arrival',
     desc: 'Lay-flat thread-bound notebook with subtle dot-grid ruling, expansion inner pocket, and satin ribbon.'
   },
   {
     id: 'prod-3',
     name: 'Premium Leatherette Planner & Organiser 2026',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 210,
     colors: ['#a37f3a', '#111111', '#556b2f'],
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/dual_tip_markers.jpg',
     tag: 'Signature',
     desc: 'Editorial weekly & monthly planner with goal setting trackers, gold foil stamping, and magnetic clasp.'
   },
 
-  // 2. Pens & Writing
   {
     id: 'prod-4',
     name: 'Matte Brass Fountain Pen & Ink Set',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 86,
     colors: ['#d4af37', '#111111'],
-    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/brass_fountain_pen.jpg',
     tag: 'Luxury',
     desc: 'Precision engineered solid brass fountain pen with German stainless steel medium nib and luxury presentation box.'
   },
   {
     id: 'prod-5',
     name: 'Architectural Gel Rollerball Pen (Pack of 3)',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.7,
     reviewsCount: 142,
     colors: ['#111111', '#ffffff', '#888888'],
-    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/dual_tip_markers.jpg',
     tag: 'Essential',
     desc: '0.5mm ultra-smooth quick-dry Japanese archival gel ink pens designed for skip-free daily writing.'
   },
   {
     id: 'prod-6',
     name: 'Pastel Highlighters & Fine Liner Set',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.8,
     reviewsCount: 78,
     colors: ['#ffb6c1', '#add8e6', '#e6e6fa'],
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80',
-    tag: 'School & Art',
-    desc: 'Dual-tip pastel aesthetic highlighters with water-based bleed-resistant ink.'
+    image: 'Asset/dual_tip_markers.jpg',
+    tag: 'Pastel Office Set',
+    desc: 'Dual-tip pastel aesthetic highlighters with water-based bleed-resistant ink designed for corporate desk planning.'
   },
 
   // 3. Office & A4 Paper
@@ -209,7 +253,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 185,
     colors: ['#ffffff'],
-    image: 'https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/a4_copier_paper.png',
     tag: 'Wholesale Box',
     desc: 'Bulk office carton containing 5 sealed reams (2500 sheets total) of 80 GSM A4 premium copier paper with 94 brightness in moisture-proof protective wrapper.'
   },
@@ -224,7 +268,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 64,
     colors: ['#111111', '#2e4057'],
-    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/l_folder_sleeves.jpg',
     tag: 'Filing',
     desc: '13-pocket expandable PP document file with color index tabs and secure elastic closure.'
   },
@@ -423,7 +467,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 178,
     colors: ['#c5a059', '#111111'],
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/kraft_courier_bags.png',
     tag: '3D Paper Bag',
     desc: 'Architectural 3D gusseted heavy-duty kraft paper shopping bags featuring twisted cotton rope handles and reinforced cardboard bottom.'
   },
@@ -491,84 +535,84 @@ const PRODUCTS_DATA = [
   // Expanded Fine Stationery & Office Essentials Catalog
   {
     id: 'prod-27',
-    name: 'Practical Science Record Book & Lab Manual (Hardbound 200 Pages)',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    name: 'Executive Meeting Ledger & Conference Padfolio (200 Pages)',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 145,
     colors: ['#2e4057', '#111111'],
-    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80',
-    tag: 'School & Lab',
-    desc: 'High-grade 80 GSM ruled and unruled interleaved practical experiment record book for physics, chemistry, and biology labs.'
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Conference Pad',
+    desc: 'High-grade 80 GSM ruled executive conference padfolio and master meeting register.'
   },
   {
     id: 'prod-28',
     name: 'Spiral-Bound B5 5-Subject Executive Notebook',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.8,
     reviewsCount: 198,
     colors: ['#c5a059', '#111111'],
-    image: 'https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/l_folder_sleeves.jpg',
     tag: '5-Subject',
     desc: 'Multi-subject spiral notebook with movable plastic index dividers, inner pocket folder, and fountain-pen friendly paper.'
   },
   {
     id: 'prod-29',
     name: 'Hardcover Accounts Ledger & Cash Book Register',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 110,
     colors: ['#a37f3a'],
-    image: 'https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/security_envelopes_box.png',
     tag: 'Accounts Register',
     desc: 'Traditional heavy-duty bound financial ledger and accounts register with pre-numbered columns for business book-keeping.'
   },
   {
     id: 'prod-30',
     name: 'Precision Drafting Mechanical Pencil 0.7mm Set with Refill Lead',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 172,
     colors: ['#d4af37', '#111111'],
-    image: 'https://images.unsplash.com/photo-1580569214296-5cf2bffc5ccd?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/geometry_box.jpg',
     tag: 'Drafting Pencil',
     desc: 'Ergonomic metal grip mechanical pencil with 2B polymer HB lead refill tubes and built-in eraser for precision drawing.'
   },
   {
     id: 'prod-31',
-    name: 'Dust-Free Polymer Erasers & Metal Double Sharpener Kit (Pack of 5)',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    name: 'Executive Bamboo Desktop Pencil & Pen Holder Combo Set',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.8,
     reviewsCount: 130,
     colors: ['#ffffff'],
-    image: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=600&q=80',
-    tag: 'School Kit',
-    desc: 'Non-toxic dust-free polymer erasers and heavy-duty steel double-hole sharpener set for graphite and color pencils.'
+    image: 'Asset/stapler_set.jpg',
+    tag: 'Bamboo Desk Set',
+    desc: 'Sustainable handcrafted bamboo desktop pen stand, card dock, and mechanical drafting pencil set.'
   },
   {
     id: 'prod-32',
     name: 'Dual-Tip Permanent Marker Set (Black, Blue, Red - Pack of 4)',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
@@ -590,7 +634,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 165,
     colors: ['#2e4057', '#111111'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/l_folder_sleeves.jpg',
     tag: 'Arch Ring File',
     desc: 'Premium board lever arch file with stainless steel locking mechanism, spine label slot, and metal edge protectors for A4 document storage.'
   },
@@ -620,7 +664,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 185,
     colors: ['#ffb6c1', '#add8e6', '#e6e6fa'],
-    image: 'https://images.unsplash.com/photo-1586282391129-76a6df230234?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/dual_tip_markers.jpg',
     tag: 'Desk Memo',
     desc: '400-sheet self-adhesive neon sticky notes and translucent PET bookmark index flags for quick memo writing and book tagging.'
   },
@@ -641,7 +685,7 @@ const PRODUCTS_DATA = [
   },
   {
     id: 'prod-37',
-    name: 'Precision Geometry Math Compass Box & Stainless Steel Scale Set',
+    name: 'Executive Metal Mesh Business Card & Memo Holder Dock',
     category: 'office',
     categoryName: 'Office Stationery',
     price: 0,
@@ -649,14 +693,14 @@ const PRODUCTS_DATA = [
     discount: '',
     rating: 4.9,
     reviewsCount: 156,
-    colors: ['#ffffff'],
-    image: 'Asset/geometry_box.jpg',
-    tag: 'Geometry Box',
-    desc: 'Metal tin geometry mathematical set with precision die-cast compass, divider, protractor, set squares, and 30cm steel ruler.'
+    colors: ['#111111', '#c5a059'],
+    image: 'Asset/stapler_set.jpg',
+    tag: 'Desk Dock',
+    desc: 'Powder-coated steel mesh desk card dock and memo note holder for executive desks.'
   },
   {
     id: 'prod-38',
-    name: 'Artist Acrylic & Watercolor Paint Tube Set (12 Colors with Brushes)',
+    name: 'Heavy-Duty 2-Hole Desktop Steel Paper Puncher (40 Sheets)',
     category: 'office',
     categoryName: 'Office Stationery',
     price: 0,
@@ -664,70 +708,69 @@ const PRODUCTS_DATA = [
     discount: '',
     rating: 5.0,
     reviewsCount: 120,
-    colors: ['#ff0000', '#0000ff', '#ffff00'],
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80',
-    tag: 'Art & Craft',
-    desc: 'Rich pigment 12ml non-toxic artist acrylic and watercolor paints with synthetic hair flat and round brushes.'
+    colors: ['#111111', '#2e4057'],
+    image: 'Asset/stapler_set.jpg',
+    tag: 'Paper Puncher',
   },
 
   // 12 New Premium E-Commerce Items (School, Art, Copier & Packaging Expansion)
   {
     id: 'prod-39',
-    name: 'Softcover Single-Line Long Book (Pack of 6 | 172 Pages)',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    name: 'Executive Leatherette Pocket Notebook Set (Pack of 3 | 192 Pages)',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 215,
     colors: ['#1e293b', '#c5a059'],
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80',
-    tag: 'School Pack',
-    desc: 'High-brightness 57 GSM white paper longbooks with pin-bound soft covers engineered for school students and daily note-taking.'
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Pocket Notebooks',
+    desc: 'Hardcover pocket journals with gold foil stamping and ribbon bookmarks for executives.'
   },
   {
     id: 'prod-40',
-    name: '100 GSM Spiral Art Sketchbook A4 (80 Pages)',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    name: 'Executive Grid Project Planner & Hardcover Legal Journal',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 168,
-    colors: ['#111111'],
-    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80',
-    tag: 'Art & Design',
-    desc: 'Acid-free 160 GSM cartridge paper spiral-bound sketchbook suitable for graphite, charcoal, ink fineliners, and light watercolor washes.'
+    colors: ['#111111', '#c5a059'],
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Project Journal',
+    desc: 'Hardcover grid ruled project planning journal with ribbons and index tabs for corporate project management.'
   },
   {
     id: 'prod-41',
     name: 'Rollerball Executive Signature Ink Pen Set (Gold Trim)',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 142,
     colors: ['#d4af37', '#111111'],
-    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/dual_tip_markers.jpg',
     tag: 'Executive Signature',
     desc: 'Weighted metal body rollerball pen featuring 0.7mm German liquid ink cartridge and gold-plated clip for executive contract signings.'
   },
   {
     id: 'prod-42',
     name: 'Fineliner Archival Micro Technical Pens (Pack of 6 Assorted Nibs)',
-    category: 'pens',
-    categoryName: 'Pens & Writing',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 4.9,
     reviewsCount: 190,
     colors: ['#111111'],
-    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/dual_tip_markers.jpg',
     tag: 'Technical Micro',
     desc: 'Waterproof fade-proof pigment ink micro fineliners with precision metal-clad nib sizes (0.05mm to 0.8mm) for architectural drawing.'
   },
@@ -817,7 +860,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 114,
     colors: ['#111111'],
-    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80',
+    image: 'Asset/stapler_set.jpg',
     tag: 'Desk Organizer',
     desc: 'Scratch-resistant powder-coated steel mesh desk organizer featuring 3 letter trays, pen cup holder, and sticky note dispenser.'
   },
@@ -838,18 +881,18 @@ const PRODUCTS_DATA = [
   },
   {
     id: 'prod-50',
-    name: 'Soft Leatherette Zippered Multi-Slot Pencil & Tool Case',
-    category: 'books',
-    categoryName: 'Books & Notebooks',
+    name: 'Executive Leatherette Zippered Document Portfolio & Padfolio',
+    category: 'office',
+    categoryName: 'Office Stationery',
     price: 0,
     mrp: 0,
     discount: '',
     rating: 5.0,
     reviewsCount: 175,
     colors: ['#c5a059', '#111111'],
-    image: 'https://images.unsplash.com/photo-1585336261026-875a60a1c96b?auto=format&fit=crop&w=600&q=80',
-    tag: 'Executive Pouch',
-    desc: 'Water-resistant vegan leatherette pouch with dual zipper compartments, mesh pockets, and elastic pen loops for students and office executives.'
+    image: 'Asset/l_folder_sleeves.jpg',
+    tag: 'Executive Portfolio',
+    desc: 'Water-resistant vegan leatherette document portfolio folder with dual zipper compartments and pen loops for business executives.'
   }
 ];
 
@@ -866,6 +909,16 @@ let heroAutoTimer = null;
 // DOM Initialization
 document.addEventListener('DOMContentLoaded', () => {
   loadStateFromStorage();
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam) {
+    activeCategory = catParam;
+    const activePill = document.querySelector(`.cat-pill[data-cat="${catParam}"]`);
+    if (activePill) {
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+      activePill.classList.add('active');
+    }
+  }
   renderAllProductSections();
   updateBadges();
   setupEventListeners();
@@ -943,6 +996,7 @@ function initHeroSlider() {
 function renderAllProductSections() {
   renderMainCollection();
   renderBestSellers();
+  renderGiftingCollection();
   renderPackagingCollection();
   renderNewArrivals();
 
@@ -950,7 +1004,7 @@ function renderAllProductSections() {
   renderShopPage();
   renderStationeryPage();
   renderOfficePage();
-  renderSchoolPage();
+  renderGiftingPage();
   renderPackagingPage();
 }
 
@@ -974,7 +1028,7 @@ function renderStationeryPage() {
   const container = document.getElementById('stationeryGrid');
   if (!container) return;
 
-  const list = PRODUCTS_DATA.filter(p => p.category === 'books' || p.category === 'pens');
+  const list = PRODUCTS_DATA.filter(p => p.category === 'office');
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
@@ -986,11 +1040,11 @@ function renderOfficePage() {
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
-function renderSchoolPage() {
-  const container = document.getElementById('schoolGrid');
+function renderGiftingPage() {
+  const container = document.getElementById('giftingGrid');
   if (!container) return;
 
-  const list = PRODUCTS_DATA.filter(p => p.tag.toLowerCase().includes('school') || p.tag.toLowerCase().includes('lab') || p.id === 'prod-27' || p.id === 'prod-30' || p.id === 'prod-31' || p.id === 'prod-37' || p.id === 'prod-38');
+  const list = PRODUCTS_DATA.filter(p => p.category === 'gifting' || (p.tag && (p.tag.toLowerCase().includes('combo') || p.tag.toLowerCase().includes('gift'))));
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
@@ -1020,11 +1074,12 @@ function getFilteredProducts() {
 function buildProductCardHTML(p) {
   const isWishlisted = wishlist.includes(p.id);
   const colorSwatches = p.colors.map(c => `<span class="swatch-circle" style="background-color: ${c};"></span>`).join('');
+  const fallbackImg = p.category === 'packaging' ? 'Asset/corrugated_box.png' : (p.category === 'gifting' ? 'Asset/security_envelopes_box.png' : 'Asset/a4_copier_paper.png');
 
   return `
     <div class="luxury-product-card">
       <div class="card-img-container" onclick="openQuickView('${p.id}')">
-        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
         <span class="badge-tag-editorial ${p.discount ? 'discount' : ''}">${p.tag}</span>
         
         <!-- Floating Vertical Action Column (Top Right Corner Reference Match) -->
@@ -1095,6 +1150,14 @@ function renderPackagingCollection() {
   if (!container) return;
 
   const list = PRODUCTS_DATA.filter(p => p.category === 'packaging');
+  container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
+}
+
+function renderGiftingCollection() {
+  const container = document.getElementById('giftingCollectionGrid');
+  if (!container) return;
+
+  const list = PRODUCTS_DATA.filter(p => p.category === 'gifting').slice(0, 4);
   container.innerHTML = list.map(p => buildProductCardHTML(p)).join('');
 }
 
@@ -1171,7 +1234,7 @@ function renderCartDrawer() {
 
   body.innerHTML = cart.map(item => `
     <div class="cart-drawer-item">
-      <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
+      <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="this.onerror=null; this.src='Asset/a4_copier_paper.png';">
       <div style="flex:1;">
         <div style="font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600;">${item.name}</div>
         <div style="font-size: 0.88rem; font-weight: 700; color: var(--accent-gold); margin-top: 2px;">₹${item.price} &bull; Total: ₹${item.price * item.qty}</div>
@@ -1221,7 +1284,7 @@ function openQuickView(productId) {
     <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; align-items: start;">
       <div>
         <div style="position:relative; overflow:hidden; border-radius: var(--radius-md); border:1px solid var(--border-light); background:#fff; text-align:center;">
-          <img src="${p.image}" alt="${p.name}" id="qvMainImage" style="width: 100%; height: 320px; object-fit: contain; padding: 12px; cursor: zoom-in;" onclick="openImageLightbox('${p.image}', '${p.name}')" onerror="this.onerror=null; this.src='Asset/boxes_stack.jpg';">
+          <img src="${p.image}" alt="${p.name}" id="qvMainImage" style="width: 100%; height: 320px; object-fit: contain; padding: 12px; cursor: zoom-in;" onclick="openImageLightbox('${p.image}', '${p.name}')" onerror="this.onerror=null; this.src='Asset/a4_copier_paper.png';">
           <div style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:12px; font-size:0.75rem; pointer-events:none;">Click Image to Zoom HD</div>
         </div>
 
@@ -1343,7 +1406,7 @@ function openSampleModal(productId) {
             <input type="text" id="sampleProdTitle" readonly value="${p.name}" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px; background:#f8fafc; font-weight:700;">
           </div>
           <div style="margin-bottom:12px;">
-            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Company / School Name *</label>
+            <label style="font-size:0.78rem; font-weight:700; text-transform:uppercase;">Company / Firm Name *</label>
             <input type="text" required placeholder="Organization Name" style="width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:4px;">
           </div>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">

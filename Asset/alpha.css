@@ -516,8 +516,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .category-visual-card {
