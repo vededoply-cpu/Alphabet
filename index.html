@@ -15,10 +15,28 @@
 </head>
 <body>
 
+  <!-- Top Utility Announcement Strip (Matching Mirai B2B Header) -->
+  <div class="top-announcement-strip">
+    <div class="container top-strip-inner">
+      <div class="strip-left-info">
+        <span>📍 679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</span>
+        <span class="strip-divider">|</span>
+        <span>📧 sales@alphabetcorporation.in</span>
+        <span class="strip-divider">|</span>
+        <span>📜 GSTIN: <strong style="color:var(--accent-gold);">09DHOPM9732B1ZZ</strong></span>
+      </div>
+      <div class="strip-right-info">
+        <span>🕒 Mon - Sat: 9:00 AM - 7:00 PM</span>
+        <span class="strip-divider">|</span>
+        <span>📞 Helpline: <strong style="color:#fff;">+91 9667501707</strong></span>
+      </div>
+    </div>
+  </div>
+
   <!-- Sticky Luxury Header -->
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#home" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
+      <a href="index.html" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
         <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
       </a>
 
@@ -33,7 +51,7 @@
         <a href="contact.html" class="nav-item-link">CONTACT</a>
       </nav>
 
-      <!-- Right Header Action Icons -->
+      <!-- Right Header Action Icons & Quote Button -->
       <div class="header-right-icons">
         <button class="icon-btn-header" onclick="openSearchOverlay()" title="Search Products" aria-label="Search">
           <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -95,6 +113,8 @@
           <span class="badge-count" id="cartBadgeCount">0</span>
         </button>
 
+        <button class="btn-mirai-quote" style="padding:10px 18px; font-size:0.82rem;" onclick="openCheckoutModal()">REQUEST QUOTE &rarr;</button>
+
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
           <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -131,113 +151,56 @@
   <!-- Main Editorial Page Structure -->
   <main id="home">
     
-    <!-- 1. Hero Multi-Slide Interactive Carousel -->
-    <section class="hero-slider-section">
-      <!-- Slide 1: Fine Stationery -->
-      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1920&q=85');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">ALPHABET CORPORATION &bull; B2B MANUFACTURER &amp; WHOLESALE HUB</div>
-            <h1 class="hero-main-title">ALPHABET CORPORATION</h1>
-            <p class="hero-description">
-              India's premier industrial manufacturer &amp; wholesale supplier of fine stationery, corporate office supplies, corporate gifting combos, and heavy-duty custom packaging solutions.
+    <!-- 1. 2-Column B2B E-Commerce Hero Section (Exact Reference Layout Match) -->
+    <section class="b2b-hero-section">
+      <div class="container">
+        <div class="b2b-hero-grid">
+          
+          <!-- Left Column: Headline, Enterprise Description & B2B Trust Badges -->
+          <div class="b2b-hero-content">
+            <h1 class="b2b-hero-title">
+              Serving All Office &amp; Packaging Needs <span class="highlight-blue-gradient">Under One Roof</span>
+            </h1>
+            
+            <p class="b2b-hero-desc">
+              ALPHABET CORPORATION is an ISO 9001:2015 certified, Kanpur-based manufacturing and wholesale enterprise specializing in end-to-end office stationery, 80 GSM copier paper reams, corporate gift sets, and industrial material handling solutions. The company eliminates multi-vendor procurement bottlenecks by delivering factory-direct pricing, custom branding, and bulk dispatch on a single platform.
             </p>
-            <div class="hero-cta-buttons">
-              <a href="#collection" class="btn-editorial btn-gold">SHOP B2B CATALOGUE</a>
-              <a href="#categories" class="btn-editorial btn-outline-white">EXPLORE CATEGORIES</a>
+
+            <!-- B2B Trust Pill Badges Grid -->
+            <div class="b2b-trust-grid">
+              <div class="b2b-pill-row">
+                <span class="b2b-trust-pill blue-accent">&bull; ISO 9001:2015 CERTIFIED &bull; KANPUR MANUFACTURING UNIT</span>
+              </div>
+              <div class="b2b-pill-row">
+                <span class="b2b-trust-pill gold-accent">Direct Factory Pricing &bull; 50+ Custom Sizes in Stock &bull; Express Dispatch</span>
+              </div>
+              <div class="b2b-pill-row">
+                <span class="b2b-trust-pill">&check; 80 GSM Copier Paper &amp; B2B Ledgers</span>
+                <span class="b2b-trust-pill">&check; Tamper-Proof Courier Flyers &amp; POD Bags</span>
+              </div>
+              <div class="b2b-pill-row">
+                <span class="b2b-trust-pill">&check; Custom Logo Printed BOPP Tapes</span>
+                <span class="b2b-trust-pill">&check; Executive Corporate Gift Combos</span>
+              </div>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="b2b-cta-group">
+              <button class="btn-mirai-quote" onclick="openCheckoutModal()">REQUEST QUOTE &rarr;</button>
+              <a href="shop.html" class="btn-mirai-catalog">BROWSE E-COMMERCE CATALOG &rarr;</a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Slide 2: BOPP Transparent Packaging Tape Spotlight -->
-      <div class="hero-slide" style="background-image: url('Asset/bopp_clear_tape.jpg');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Industrial &amp; Packaging Spotlight</div>
-            <h1 class="hero-main-title">BOPP CLEAR PACKAGING TAPE ROLL</h1>
-            <p class="hero-description">
-              High-tensile clear BOPP packaging tape engineered for heavy-duty carton sealing, 48mm width, 65m length, 48-micron film with instant tack water-based acrylic adhesive. Available in bulk &amp; custom widths.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Roll (Sample Roll)</span>
-            </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP PACKAGING TAPE</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-9')">ADD TO BAG &rarr;</button>
-            </div>
+          <!-- Right Column: Interactive Product & Warehouse Showcase Card -->
+          <div class="b2b-hero-card">
+            <span class="b2b-card-tag" id="b2bHeroCardTag">ALL-IN-ONE OFFICE &amp; PACKAGING KITS</span>
+            <img src="Asset/executive_gift_set.jpg" alt="ALPHABET B2B Products & Warehouse Showcase" id="b2bHeroCardImg">
+            
+            <button class="b2b-card-arrow prev" onclick="prevB2BHeroSlide()" aria-label="Previous Product">&lsaquo;</button>
+            <button class="b2b-card-arrow next" onclick="nextB2BHeroSlide()" aria-label="Next Product">&rsaquo;</button>
           </div>
+
         </div>
-      </div>
-
-      <!-- Slide 3: Heavy-Duty Corrugated Shipping Boxes Stack -->
-      <div class="hero-slide" style="background-image: url('Asset/boxes_stack.jpg');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Logistics &amp; Wholesale Packaging</div>
-            <h1 class="hero-main-title">HEAVY-DUTY CORRUGATED PACKAGING BOXES</h1>
-            <p class="hero-description">
-              Multi-depth 3-ply &amp; 5-ply Kraft corrugated shipping boxes with high bursting strength, superior stackability, and heavy load resistance for wholesale dispatch &amp; e-commerce freight.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Box)</span>
-            </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP SHIPPING BOXES</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-13')">ADD TO BAG &rarr;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 4: Self-Locking Master Packaging Carton -->
-      <div class="hero-slide" style="background-image: url('Asset/corrugated_box.png');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Custom E-Commerce Packaging</div>
-            <h1 class="hero-main-title">SELF-LOCKING MASTER PACKAGING CARTON</h1>
-            <p class="hero-description">
-              Precision die-cut self-locking master packaging box featuring double-walled crush protection, clean telescoping lid closure, and smooth natural kraft paper finish for premium unboxing.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Carton)</span>
-            </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP MASTER CARTONS</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-11')">ADD TO BAG &rarr;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 5: Custom Branding & Printed Tapes -->
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1920&q=85');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Custom Branding &amp; E-Commerce</div>
-            <h1 class="hero-main-title">CUSTOM PRINTED TAPES &amp; BRANDED BOXES</h1>
-            <p class="hero-description">
-              Elevate your brand unboxing experience with custom logo printed packaging tapes, self-locking mailer boxes, and security courier flyer bags.
-            </p>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">CUSTOM PACKAGING</a>
-              <a href="#collection" class="btn-editorial btn-outline-white">BROWSE STORE</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Carousel Arrow Controls -->
-      <button class="hero-nav-arrow prev" onclick="prevHeroSlide()" aria-label="Previous Slide">&lsaquo;</button>
-      <button class="hero-nav-arrow next" onclick="nextHeroSlide()" aria-label="Next Slide">&rsaquo;</button>
-
-      <!-- Carousel Dot Pagination -->
-      <div class="hero-dots-container">
-        <span class="hero-dot active" onclick="goToHeroSlide(0)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(1)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(2)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(3)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(4)"></span>
       </div>
     </section>
 
@@ -867,6 +830,16 @@
         <!-- Rendered dynamically by alpha.js -->
       </div>
     </div>
+  </div>
+
+  <!-- Floating Quick Phone & WhatsApp Action Stack (Matching Reference) -->
+  <div class="floating-contact-stack">
+    <a href="tel:+919667501707" class="floating-circle-btn phone" title="Call Sales Helpline (+91 9667501707)" aria-label="Call Helpline">
+      <svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+    <a href="https://wa.me/919667501707?text=Hello%20ALPHABET%20CORPORATION,%20I%20want%20to%20inquire%20about%20B2B%20products." target="_blank" class="floating-circle-btn whatsapp" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <svg class="svg-icon" viewBox="0 0 24 24" style="fill:#ffffff; stroke:none;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
   </div>
 
 </body>
