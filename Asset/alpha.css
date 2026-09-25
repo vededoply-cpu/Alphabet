@@ -2982,12 +2982,15 @@ img, svg, video, iframe {
 }
 
 .client-logo-svg, .client-logo-img {
-  height: 28px;
+  height: 38px;
   width: auto;
-  max-width: 140px;
+  max-width: 150px;
   object-fit: contain;
   flex-shrink: 0;
   transition: all 0.25s ease;
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
 .client-brand-info {
