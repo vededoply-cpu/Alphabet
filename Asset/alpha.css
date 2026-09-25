@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Industrial SaaS Brand Colors */
-  --bg-body: #f8fafc;         /* Crisp Slate White Canvas */
+  /* Industrial SaaS Colors: Enterprise Royal Blue + Vibrant Light Yellow */
+  --bg-body: #f8fafc;         /* Crisp Slate Canvas */
   --bg-white: #ffffff;
   --bg-surface: #ffffff;
   --bg-subtle: #f1f5f9;
-  --bg-dark: #0f172a;        /* Deep Slate Navy Header & Dark Elements */
+  --bg-dark: #0f172a;        /* Deep Slate Navy / Royal Dark */
   --bg-footer: #090d16;      /* Deepest Oxide Dark */
 
   --text-dark: #0f172a;      /* Deep Slate Navy Text */
@@ -15,10 +15,12 @@
   --text-muted: #64748b;     /* Slate Muted Text */
   --text-light: #94a3b8;     /* Sub-muted Text */
 
-  --accent-gold: #d97706;     /* Warm Amber Accent */
-  --accent-gold-dark: #b45309;
-  --accent-gold-light: #fef3c7;
-  --accent-blue: #2563eb;      /* Enterprise Trust Blue Badge */
+  --accent-gold: #eab308;     /* Bright Vibrant Light Yellow Accent */
+  --accent-gold-dark: #ca8a04;
+  --accent-gold-light: #fef9c3;
+  --accent-yellow-bright: #fde047;
+  --accent-blue: #2563eb;      /* Enterprise Royal Blue */
+  --accent-blue-dark: #1d4ed8;
   --accent-blue-light: #dbeafe;
 
   --border-light: #e2e8f0;    /* Crisp 1px Slate Border */
@@ -292,22 +294,25 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-links-wrapper {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 .nav-item-link {
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.8px;
   color: var(--text-dark);
   transition: var(--transition);
   position: relative;
   padding: 8px 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-item-link:hover, .nav-item-link.active {
-  color: var(--accent-gold);
+  color: var(--accent-blue);
 }
 
 .nav-item-link::after {
@@ -317,8 +322,9 @@ img { max-width: 100%; height: auto; display: block; }
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 2px;
+  height: 3px;
   background: var(--accent-gold);
+  border-radius: 2px;
   transition: var(--transition);
 }
 
