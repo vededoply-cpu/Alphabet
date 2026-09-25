@@ -2980,13 +2980,13 @@ img, svg, video, iframe {
   box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15);
 }
 
-.client-logo-svg {
-  height: 24px;
+.client-logo-svg, .client-logo-img {
+  height: 28px;
   width: auto;
-  min-width: 24px;
-  fill: currentColor;
-  color: #fbbf24;
+  max-width: 140px;
+  object-fit: contain;
   flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
 .client-brand-info {

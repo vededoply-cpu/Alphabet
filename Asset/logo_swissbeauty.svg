@@ -1,0 +1,7 @@
+<svg viewBox="0 0 175 40" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#FFFFFF">
+    <rect x="4" y="8" width="24" height="24" rx="4" fill="#EF4444"/>
+    <path d="M14 13H18V18H23V22H18V27H14V22H9V18H14V13Z" fill="#FFFFFF"/>
+    <text x="36" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" letter-spacing="1.5" fill="#FFFFFF">SWISS BEAUTY</text>
+  </g>
+</svg>

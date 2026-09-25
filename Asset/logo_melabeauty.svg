@@ -1,0 +1,7 @@
+<svg viewBox="0 0 165 40" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#FFFFFF">
+    <path d="M16 6C10 6 6 12 6 18C6 25 16 32 16 32C16 32 26 25 26 18C26 12 22 6 16 6Z" fill="#EC4899"/>
+    <circle cx="16" cy="17" r="4" fill="#FFFFFF"/>
+    <text x="34" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" letter-spacing="1.5" fill="#FFFFFF">MELA BEAUTY</text>
+  </g>
+</svg>
