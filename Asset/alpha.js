@@ -2126,39 +2126,3 @@ function handleHeaderSearchInput() {
   html += `</div>`;
   resultsContainer.innerHTML = html;
 }
-
-// B2B Hero Product Card Slider
-let currentB2BHeroIndex = 0;
-const b2bHeroImages = [
-  { img: 'Asset/executive_gift_set.jpg', tag: 'EXECUTIVE GIFTING COMBOS' },
-  { img: 'Asset/a4_copier_paper.png', tag: '80 GSM A4 COPIER PAPER' },
-  { img: 'Asset/boxes_stack.jpg', tag: 'HEAVY-DUTY SHIPPING CARTONS' },
-  { img: 'Asset/bopp_clear_tape.jpg', tag: 'BOPP CLEAR & PRINTED TAPES' },
-  { img: 'Asset/onboarding_gift_kit.jpg', tag: 'EMPLOYEE ONBOARDING KITS' }
-];
-
-window.nextB2BHeroSlide = function() {
-  currentB2BHeroIndex = (currentB2BHeroIndex + 1) % b2bHeroImages.length;
-  updateB2BHeroCard();
-};
-
-window.prevB2BHeroSlide = function() {
-  currentB2BHeroIndex = (currentB2BHeroIndex - 1 + b2bHeroImages.length) % b2bHeroImages.length;
-  updateB2BHeroCard();
-};
-
-function updateB2BHeroCard() {
-  const imgElem = document.getElementById('b2bHeroCardImg');
-  const tagElem = document.getElementById('b2bHeroCardTag');
-  if (imgElem) imgElem.src = b2bHeroImages[currentB2BHeroIndex].img;
-  if (tagElem) tagElem.textContent = b2bHeroImages[currentB2BHeroIndex].tag;
-}
-
-// Auto transition B2B hero card every 5s
-setInterval(() => {
-  if (document.getElementById('b2bHeroCardImg')) {
-    currentB2BHeroIndex = (currentB2BHeroIndex + 1) % b2bHeroImages.length;
-    updateB2BHeroCard();
-  }
-}, 5000);
-
