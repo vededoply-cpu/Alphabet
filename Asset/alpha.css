@@ -1,37 +1,44 @@
-/* ALPHABET - High-End Luxury Editorial E-Commerce Design System (0% Emojis, 100% Vector SVG) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+/* ALPHABET - Industrial B2B E-Commerce & SaaS Application Design System */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-body: #fcfbf9;
+  /* Industrial SaaS Brand Colors */
+  --bg-body: #f8fafc;         /* Crisp Slate White Canvas */
   --bg-white: #ffffff;
-  --bg-dark: #111111;
-  --bg-footer: #0a0a0a;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-dark: #0f172a;        /* Deep Slate Navy Header & Dark Elements */
+  --bg-footer: #090d16;      /* Deepest Oxide Dark */
 
-  --text-dark: #111111;
-  --text-sub: #444444;
-  --text-muted: #777777;
-  --text-light: #aaaaaa;
+  --text-dark: #0f172a;      /* Deep Slate Navy Text */
+  --text-sub: #334155;       /* Slate Medium Text */
+  --text-muted: #64748b;     /* Slate Muted Text */
+  --text-light: #94a3b8;     /* Sub-muted Text */
 
-  --accent-gold: #c5a059;
-  --accent-gold-dark: #a37f3a;
-  --accent-gold-light: #f7f3eb;
+  --accent-gold: #d97706;     /* Warm Amber Accent */
+  --accent-gold-dark: #b45309;
+  --accent-gold-light: #fef3c7;
+  --accent-blue: #2563eb;      /* Enterprise Trust Blue Badge */
+  --accent-blue-light: #dbeafe;
 
-  --border-light: #eae7e1;
-  --border-dark: #222222;
+  --border-light: #e2e8f0;    /* Crisp 1px Slate Border */
+  --border-dark: #1e293b;
 
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-serif: 'Plus Jakarta Sans', sans-serif; /* High impact grotesk SaaS heading */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --radius-sm: 4px;
+  --radius-sm: 6px;
   --radius-md: 8px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 
-  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.12), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.15), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
 
-  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Base Reset & Globals */
@@ -64,6 +71,123 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0 32px;
 }
 
+/* Top Announcement & Trust Bar */
+.top-announcement-bar {
+  background: #090d16;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-bottom: 1px solid #1e293b;
+  padding: 8px 0;
+}
+
+.announcement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.announcement-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.trust-badge-pill.blue {
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.trust-badge-pill.gold {
+  background: rgba(217, 119, 6, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+.trust-badge-pill.subtle {
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+}
+
+.announcement-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbd5e1;
+}
+
+.announcement-right .divider {
+  color: #475569;
+}
+
+.helpline-link {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.helpline-link:hover {
+  text-decoration: underline;
+}
+
+/* Command-Style Search Trigger Bar */
+.cmd-search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f1f5f9;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 220px;
+}
+
+.cmd-search-trigger:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-dark);
+}
+
+.cmd-key-badge {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-left: auto;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
 /* Inline Vector SVG Styling */
 .svg-icon {
   width: 20px;
@@ -87,7 +211,7 @@ img { max-width: 100%; height: auto; display: block; }
   height: 24px;
 }
 
-/* Editorial Headings */
+/* Application Headings */
 .font-serif {
   font-family: var(--font-serif);
 }
@@ -95,41 +219,42 @@ img { max-width: 100%; height: auto; display: block; }
 .section-header {
   text-align: center;
   max-width: 720px;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
 }
 
 .section-subtitle-tag {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   color: var(--accent-gold);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   display: block;
 }
 
 .section-title-editorial {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 800;
   color: var(--text-dark);
   letter-spacing: -0.5px;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .section-desc {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-sub);
-  margin-top: 14px;
+  margin-top: 10px;
   font-weight: 400;
 }
 
 .gold-divider {
-  width: 60px;
-  height: 2px;
+  width: 48px;
+  height: 3px;
   background: var(--accent-gold);
-  margin: 16px auto 0;
+  border-radius: 2px;
+  margin: 14px auto 0;
 }
 
 /* Header & Navigation */
@@ -2654,5 +2779,120 @@ img, svg, video, iframe {
     text-align: center !important;
     gap: 10px !important;
   }
+}
+
+/* Toast Notifications System (SaaS Slide-in Banner) */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  max-width: 380px;
+  width: 100%;
+}
+
+.toast-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid #1e293b;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+  font-size: 0.88rem;
+  font-family: var(--font-sans);
+  pointer-events: auto;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-item.toast-show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.toast-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(217, 119, 6, 0.2);
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-message {
+  font-weight: 500;
+  line-height: 1.4;
+  color: #f8fafc;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.toast-close:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Skeleton Loading State Fallback */
+.skeleton-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-pulse {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 16px;
+}
+
+.skeleton-text {
+  width: 40%;
+  height: 12px;
 }
 

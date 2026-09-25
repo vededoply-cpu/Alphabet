@@ -1186,6 +1186,7 @@ function addToCart(productId) {
   updateBadges();
   renderCartDrawer();
   openCartDrawer();
+  showToast(`Added "${p.name.substring(0, 30)}..." to Shopping Bag`, 'success');
 }
 
 function updateCartQty(productId, qty) {
@@ -1201,10 +1202,13 @@ function updateCartQty(productId, qty) {
 }
 
 function toggleWishlist(productId) {
+  const p = PRODUCTS_DATA.find(item => item.id === productId);
   if (wishlist.includes(productId)) {
     wishlist = wishlist.filter(id => id !== productId);
+    if (p) showToast(`Removed "${p.name.substring(0, 25)}..." from Wishlist`, 'info');
   } else {
     wishlist.push(productId);
+    if (p) showToast(`Saved "${p.name.substring(0, 25)}..." to Wishlist`, 'success');
   }
   saveStateToStorage();
   updateBadges();
@@ -2126,3 +2130,45 @@ function handleHeaderSearchInput() {
   html += `</div>`;
   resultsContainer.innerHTML = html;
 }
+
+/* Toast Notifications System (SaaS Slide-in Banner) */
+function showToast(message, type = 'info') {
+  let container = document.getElementById('toastContainer');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'toastContainer';
+    container.className = 'toast-container';
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement('div');
+  toast.className = `toast-item toast-${type}`;
+  toast.innerHTML = `
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="toast-content">
+      <div class="toast-message">${message}</div>
+    </div>
+    <button class="toast-close" onclick="this.parentElement.remove()">✕</button>
+  `;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('toast-show');
+  }, 10);
+
+  setTimeout(() => {
+    toast.classList.remove('toast-show');
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+
+// Global Command-K Keyboard Shortcut Listener
+document.addEventListener('keydown', (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    openSearchOverlay();
+  }
+});

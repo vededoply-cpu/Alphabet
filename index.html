@@ -15,6 +15,22 @@
 </head>
 <body>
 
+  <!-- Top Announcement & Trust Bar -->
+  <div class="top-announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-badges">
+        <span class="trust-badge-pill blue"><span class="badge-dot"></span> ISO 9001:2015 CERTIFIED</span>
+        <span class="trust-badge-pill gold">KANPUR MANUFACTURING PLANT</span>
+        <span class="trust-badge-pill subtle">DIRECT FACTORY WHOLESALE PRICING</span>
+      </div>
+      <div class="announcement-right">
+        <span>GSTIN: <strong>09DHOPM9732B1ZZ</strong></span>
+        <span class="divider">•</span>
+        <a href="tel:+919667501707" class="helpline-link">Helpline: +91 9667501707</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Sticky Luxury Header -->
   <header class="site-header" id="header">
     <div class="container header-inner">
@@ -35,8 +51,10 @@
 
       <!-- Right Header Action Icons -->
       <div class="header-right-icons">
-        <button class="icon-btn-header" onclick="openSearchOverlay()" title="Search Products" aria-label="Search">
-          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <button class="cmd-search-trigger" onclick="openSearchOverlay()" title="Search catalog (Ctrl + K)">
+          <svg class="svg-icon-sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span style="font-size:0.8rem;">Search SKU or product...</span>
+          <kbd class="cmd-key-badge">⌘K</kbd>
         </button>
         <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
           <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
@@ -868,6 +886,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Toast Notification Stack -->
+  <div class="toast-container" id="toastContainer"></div>
 
 </body>
 </html>
