@@ -2967,36 +2967,36 @@ img, svg, video, iframe {
 .client-logo-card {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 22px;
+  gap: 16px;
+  padding: 14px 28px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   color: var(--text-dark);
   font-family: var(--font-serif);
   transition: all 0.25s ease;
   flex-shrink: 0;
   cursor: default;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .client-logo-card:hover {
   background: #ffffff;
   border-color: var(--accent-gold);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.25);
 }
 
 .client-logo-svg, .client-logo-img {
-  height: 38px;
+  height: 58px;
   width: auto;
-  max-width: 150px;
+  max-width: 200px;
   object-fit: contain;
   flex-shrink: 0;
   transition: all 0.25s ease;
   background: #ffffff;
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .client-brand-info {
@@ -3005,7 +3005,7 @@ img, svg, video, iframe {
 }
 
 .client-brand-name {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -3014,11 +3014,11 @@ img, svg, video, iframe {
 }
 
 .client-brand-sub {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: #64748b;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
