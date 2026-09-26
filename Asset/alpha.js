@@ -2175,3 +2175,30 @@ document.addEventListener('keydown', (e) => {
     openSearchOverlay();
   }
 });
+
+// Flipkart Mobile Header Scroll Sticky Handler
+function handleMobileHeaderScroll() {
+  const searchBox = document.querySelector('.fk-search-box-wrapper');
+  const catStrip = document.querySelector('.fk-category-strip');
+  if (!searchBox) return;
+
+  const isMobile = window.innerWidth <= 768;
+  if (!isMobile) {
+    searchBox.classList.remove('mobile-sticky-search');
+    if (catStrip) catStrip.classList.remove('mobile-sticky-category');
+    return;
+  }
+
+  // Scroll threshold: 70px hides logo and location rows
+  if (window.scrollY > 70) {
+    searchBox.classList.add('mobile-sticky-search');
+    if (catStrip) catStrip.classList.add('mobile-sticky-category');
+  } else {
+    searchBox.classList.remove('mobile-sticky-search');
+    if (catStrip) catStrip.classList.remove('mobile-sticky-category');
+  }
+}
+
+window.addEventListener('scroll', handleMobileHeaderScroll, { passive: true });
+window.addEventListener('resize', handleMobileHeaderScroll, { passive: true });
+document.addEventListener('DOMContentLoaded', handleMobileHeaderScroll);
