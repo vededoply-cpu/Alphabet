@@ -3239,21 +3239,66 @@ img, svg, video, iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  color: #2563eb;
   transition: all 0.2s ease;
+}
+
+.fk-category-icon-box svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .fk-category-item:hover .fk-category-icon-box,
 .fk-category-item.active .fk-category-icon-box {
-  background: #dbeafe;
-  border-color: #93c5fd;
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .fk-category-label {
   font-size: 0.78rem;
   font-weight: 700;
   white-space: nowrap;
+}
+
+/* Responsive Header Mobile Breakpoints */
+@media (max-width: 768px) {
+  .fk-header-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .fk-brand-pill-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fk-search-box-wrapper {
+    max-width: 100%;
+    width: 100%;
+    order: 3;
+  }
+  .fk-header-actions {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 2px 0;
+  }
+  .fk-action-btn {
+    font-size: 0.76rem;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+  .fk-sub-pill {
+    display: none;
+  }
 }
 
 /* Flipkart 3-Card Multi-Slide Hero Banner Grid */
