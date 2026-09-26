@@ -75,12 +75,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Top Announcement & Trust Bar */
 .top-announcement-bar {
-  background: #090d16;
-  color: #94a3b8;
-  font-size: 0.78rem;
-  font-weight: 500;
-  border-bottom: 1px solid #1e293b;
-  padding: 8px 0;
+  display: none !important;
 }
 
 .announcement-inner {
