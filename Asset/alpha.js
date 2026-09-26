@@ -69,7 +69,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 195,
     colors: ['#ffffff'],
-    image: 'Asset/a4_copier_paper.png',
+    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
     tag: 'Bulk Combo',
     desc: 'Bulk office procurement bundle containing 5 reams of 80GSM A4 paper and 2 hardbound master accounts registers.'
   },
@@ -99,7 +99,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 220,
     colors: ['#d2b48c', '#c5a059'],
-    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
     tag: 'Eco Gifting',
     desc: 'Sustainable corporate gift box featuring bamboo hardcover notebook, bamboo rollerball pen, wooden 32GB USB flash drive, and desk planter.'
   },
@@ -129,7 +129,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 175,
     colors: ['#c5a059'],
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80',
     tag: 'C-Suite Gift',
     desc: 'Ultra-premium Italian leatherette journal with 100GSM fountain-pen friendly pages, handcrafted brass nib pen, and satin ribbon bookmark.'
   },
@@ -145,7 +145,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 128,
     colors: ['#c5a059', '#111111', '#2e4057'],
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
     tag: 'Bestseller',
     desc: 'Hand-crafted linen hardcover journal featuring 200 pages of 100GSM acid-free fountain-pen friendly paper.'
   },
@@ -160,7 +160,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 94,
     colors: ['#e2d5c3', '#111111'],
-    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=800&q=80',
     tag: 'New Arrival',
     desc: 'Lay-flat thread-bound notebook with subtle dot-grid ruling, expansion inner pocket, and satin ribbon.'
   },
@@ -175,7 +175,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 210,
     colors: ['#a37f3a', '#111111', '#556b2f'],
-    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80',
     tag: 'Signature',
     desc: 'Editorial weekly & monthly planner with goal setting trackers, gold foil stamping, and magnetic clasp.'
   },
@@ -206,7 +206,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 142,
     colors: ['#111111', '#ffffff', '#888888'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80',
     tag: 'Essential',
     desc: '0.5mm ultra-smooth quick-dry Japanese archival gel ink pens designed for skip-free daily writing.'
   },
@@ -253,7 +253,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 185,
     colors: ['#ffffff'],
-    image: 'Asset/a4_copier_paper.png',
+    image: 'https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?auto=format&fit=crop&w=800&q=80',
     tag: 'Wholesale Box',
     desc: 'Bulk office carton containing 5 sealed reams (2500 sheets total) of 80 GSM A4 premium copier paper with 94 brightness in moisture-proof protective wrapper.'
   },
@@ -268,7 +268,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 64,
     colors: ['#111111', '#2e4057'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80',
     tag: 'Filing',
     desc: '13-pocket expandable PP document file with color index tabs and secure elastic closure.'
   },
@@ -467,7 +467,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 178,
     colors: ['#c5a059', '#111111'],
-    image: 'Asset/kraft_courier_bags.png',
+    image: 'https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=800&q=80',
     tag: '3D Paper Bag',
     desc: 'Architectural 3D gusseted heavy-duty kraft paper shopping bags featuring twisted cotton rope handles and reinforced cardboard bottom.'
   },
@@ -544,7 +544,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 145,
     colors: ['#2e4057', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
     tag: 'Conference Pad',
     desc: 'High-grade 80 GSM ruled executive conference padfolio and master meeting register.'
   },
@@ -559,7 +559,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 198,
     colors: ['#c5a059', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80',
     tag: '5-Subject',
     desc: 'Multi-subject spiral notebook with movable plastic index dividers, inner pocket folder, and fountain-pen friendly paper.'
   },
@@ -574,7 +574,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 110,
     colors: ['#a37f3a'],
-    image: 'Asset/security_envelopes_box.png',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
     tag: 'Accounts Register',
     desc: 'Traditional heavy-duty bound financial ledger and accounts register with pre-numbered columns for business book-keeping.'
   },
@@ -604,7 +604,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 130,
     colors: ['#ffffff'],
-    image: 'Asset/stapler_set.jpg',
+    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80',
     tag: 'Bamboo Desk Set',
     desc: 'Sustainable handcrafted bamboo desktop pen stand, card dock, and mechanical drafting pencil set.'
   },
@@ -619,7 +619,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 210,
     colors: ['#111111', '#0000ff', '#ff0000'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
     tag: 'Permanent Ink',
     desc: 'Quick-dry waterproof permanent markers with fine bullet and chisel tips for carton labeling, glass, and metal surface marking.'
   },
@@ -634,7 +634,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 165,
     colors: ['#2e4057', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'Asset/lever_arch_file.jpg',
     tag: 'Arch Ring File',
     desc: 'Premium board lever arch file with stainless steel locking mechanism, spine label slot, and metal edge protectors for A4 document storage.'
   },
@@ -664,7 +664,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 185,
     colors: ['#ffb6c1', '#add8e6', '#e6e6fa'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1594732832278-abd644401426?auto=format&fit=crop&w=800&q=80',
     tag: 'Desk Memo',
     desc: '400-sheet self-adhesive neon sticky notes and translucent PET bookmark index flags for quick memo writing and book tagging.'
   },
@@ -694,7 +694,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 156,
     colors: ['#111111', '#c5a059'],
-    image: 'Asset/stapler_set.jpg',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
     tag: 'Desk Dock',
     desc: 'Powder-coated steel mesh desk card dock and memo note holder for executive desks.'
   },
@@ -709,7 +709,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 120,
     colors: ['#111111', '#2e4057'],
-    image: 'Asset/stapler_set.jpg',
+    image: 'Asset/paper_puncher.jpg',
     tag: 'Paper Puncher',
   },
 
@@ -725,7 +725,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 215,
     colors: ['#1e293b', '#c5a059'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=800&q=80',
     tag: 'Pocket Notebooks',
     desc: 'Hardcover pocket journals with gold foil stamping and ribbon bookmarks for executives.'
   },
@@ -740,7 +740,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 168,
     colors: ['#111111', '#c5a059'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80',
     tag: 'Project Journal',
     desc: 'Hardcover grid ruled project planning journal with ribbons and index tabs for corporate project management.'
   },
@@ -755,7 +755,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 142,
     colors: ['#d4af37', '#111111'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80',
     tag: 'Executive Signature',
     desc: 'Weighted metal body rollerball pen featuring 0.7mm German liquid ink cartridge and gold-plated clip for executive contract signings.'
   },
@@ -770,7 +770,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 190,
     colors: ['#111111'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1569683795645-b62e50fbf103?auto=format&fit=crop&w=800&q=80',
     tag: 'Technical Micro',
     desc: 'Waterproof fade-proof pigment ink micro fineliners with precision metal-clad nib sizes (0.05mm to 0.8mm) for architectural drawing.'
   },
@@ -785,7 +785,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 135,
     colors: ['#ffffff'],
-    image: 'Asset/a4_copier_paper.png',
+    image: 'https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&fit=crop&w=800&q=80',
     tag: 'A3 Format Paper',
     desc: 'Large format A3 copier paper ream (297 x 420mm) engineered for CAD blueprints, architectural schematics, posters, and double-sided printing.'
   },
@@ -800,7 +800,7 @@ const PRODUCTS_DATA = [
     rating: 4.7,
     reviewsCount: 88,
     colors: ['#ffb6c1', '#add8e6', '#e6e6fa'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80',
     tag: 'Index Dividers',
     desc: 'Reinforced tab index page dividers with multi-color headers for ring binder files and corporate document organization.'
   },
@@ -815,7 +815,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 380,
     colors: ['#8b5a2b'],
-    image: 'Asset/bopp_clear_tape.jpg',
+    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80',
     tag: 'Brown Tape',
     desc: 'Heavy-duty brown Kraft shade BOPP packaging tape with 50-micron high-adhesion water-based acrylic formulation for corrugated box sealing.'
   },
@@ -830,7 +830,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 195,
     colors: ['#c5a059', '#8b5a2b'],
-    image: 'Asset/boxes_stack.jpg',
+    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80',
     tag: '5-Ply Heavy Master',
     desc: 'Heavy-duty 5-ply double-wall corrugated master dispatch box capable of carrying up to 35kg load without crushing during long-distance transit.'
   },
@@ -845,7 +845,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 210,
     colors: ['#ef4444', '#111111'],
-    image: 'Asset/gummed_paper_tape.jpg',
+    image: 'Asset/tape_dispenser_gun.jpg',
     tag: 'Tape Dispenser',
     desc: 'Ergonomic hand-held packaging tape dispenser gun with adjustable tension brake and stainless steel serrated cutter blade.'
   },
@@ -860,7 +860,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 114,
     colors: ['#111111'],
-    image: 'Asset/stapler_set.jpg',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
     tag: 'Desk Organizer',
     desc: 'Scratch-resistant powder-coated steel mesh desk organizer featuring 3 letter trays, pen cup holder, and sticky note dispenser.'
   },
@@ -875,7 +875,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 152,
     colors: ['#0000ff', '#ef4444'],
-    image: 'Asset/security_envelopes_box.png',
+    image: 'https://images.unsplash.com/photo-1583573636246-18cb2246697f?auto=format&fit=crop&w=800&q=80',
     tag: 'Official Stamp',
     desc: 'Heavy-duty self-inking rubber stamp with 10-year rotary date wheel and replaceable blue/red quick-dry ink cartridge.'
   },
@@ -890,7 +890,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 175,
     colors: ['#c5a059', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80',
     tag: 'Executive Portfolio',
     desc: 'Water-resistant vegan leatherette document portfolio folder with dual zipper compartments and pen loops for business executives.'
   }
