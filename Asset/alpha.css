@@ -3133,6 +3133,12 @@ img, svg, video, iframe {
   flex-shrink: 0;
 }
 
+.fk-header-icon-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .fk-action-btn {
   display: inline-flex;
   align-items: center;
@@ -3266,31 +3272,68 @@ img, svg, video, iframe {
 /* Responsive Header Mobile Breakpoints */
 @media (max-width: 768px) {
   .fk-header-inner {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo login"
+      "location icons"
+      "search search";
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px 14px;
     height: auto;
-    padding: 12px 16px;
-    gap: 12px;
+    align-items: center;
   }
+
+  .fk-header-actions {
+    display: contents;
+  }
+
   .fk-brand-pill-wrapper {
-    width: 100%;
-    justify-content: space-between;
+    grid-area: logo;
+    width: auto;
+    justify-content: flex-start;
+    align-self: center;
   }
+
+  .user-account-menu-wrapper {
+    grid-area: login;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .fk-header-actions > .fk-action-btn:first-child {
+    grid-area: location;
+    align-self: center;
+    justify-self: start;
+    padding-left: 0;
+  }
+
+  .fk-header-icon-btns {
+    grid-area: icons;
+    align-self: center;
+    justify-self: end;
+    gap: 6px;
+  }
+
   .fk-search-box-wrapper {
+    grid-area: search;
     max-width: 100%;
     width: 100%;
-    order: 3;
+    margin-top: 2px;
   }
-  .fk-header-actions {
-    width: 100%;
-    justify-content: space-between;
-    overflow-x: auto;
-    padding: 2px 0;
-  }
+
   .fk-action-btn {
     font-size: 0.76rem;
     padding: 6px 8px;
     white-space: nowrap;
   }
+
+  .fk-login-btn {
+    padding: 7px 16px;
+    font-size: 0.82rem;
+  }
+
   .fk-sub-pill {
     display: none;
   }
