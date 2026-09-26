@@ -815,7 +815,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 380,
     colors: ['#8b5a2b'],
-    image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80',
+    image: 'Asset/brown_tape_roll.png',
     tag: 'Brown Tape',
     desc: 'Heavy-duty brown Kraft shade BOPP packaging tape with 50-micron high-adhesion water-based acrylic formulation for corrugated box sealing.'
   },
