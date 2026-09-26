@@ -467,7 +467,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 178,
     colors: ['#c5a059', '#111111'],
-    image: 'Asset/3d_paper_bag.png',
+    image: 'Asset/3d_paper_bag.jpg',
     tag: '3D Paper Bag',
     desc: 'Architectural 3D gusseted heavy-duty kraft paper shopping bags featuring twisted cotton rope handles and reinforced cardboard bottom.'
   },
