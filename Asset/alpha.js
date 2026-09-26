@@ -39,7 +39,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 215,
     colors: ['#111111', '#2e4057'],
-    image: 'Asset/executive_gift_set.jpg',
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
     tag: 'Executive Gift',
     desc: 'Complete C-suite desk accessory kit including memo block holder, pen stand, leatherette coaster set, and letter opener.'
   },
@@ -84,7 +84,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 160,
     colors: ['#c5a059'],
-    image: 'Asset/security_envelopes_box.png',
+    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
     tag: 'Custom Gift',
     desc: 'Customized B2B gifting box with UV-printed company logo on all items for festive gifting & enterprise milestones.'
   },
@@ -99,7 +99,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 220,
     colors: ['#d2b48c', '#c5a059'],
-    image: 'Asset/geometry_box.jpg',
+    image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
     tag: 'Eco Gifting',
     desc: 'Sustainable corporate gift box featuring bamboo hardcover notebook, bamboo rollerball pen, wooden 32GB USB flash drive, and desk planter.'
   },
@@ -114,7 +114,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 310,
     colors: ['#2e4057', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80',
     tag: 'Executive Folio',
     desc: 'Bespoke conference padfolio with built-in power bank slot, magnetic closure, refillable A5 legal pad, and precision signature pen.'
   },
@@ -129,7 +129,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 175,
     colors: ['#c5a059'],
-    image: 'Asset/security_envelopes_box.png',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
     tag: 'C-Suite Gift',
     desc: 'Ultra-premium Italian leatherette journal with 100GSM fountain-pen friendly pages, handcrafted brass nib pen, and satin ribbon bookmark.'
   },
@@ -145,7 +145,7 @@ const PRODUCTS_DATA = [
     rating: 4.9,
     reviewsCount: 128,
     colors: ['#c5a059', '#111111', '#2e4057'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
     tag: 'Bestseller',
     desc: 'Hand-crafted linen hardcover journal featuring 200 pages of 100GSM acid-free fountain-pen friendly paper.'
   },
@@ -160,7 +160,7 @@ const PRODUCTS_DATA = [
     rating: 4.8,
     reviewsCount: 94,
     colors: ['#e2d5c3', '#111111'],
-    image: 'Asset/l_folder_sleeves.jpg',
+    image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
     tag: 'New Arrival',
     desc: 'Lay-flat thread-bound notebook with subtle dot-grid ruling, expansion inner pocket, and satin ribbon.'
   },
@@ -175,7 +175,7 @@ const PRODUCTS_DATA = [
     rating: 5.0,
     reviewsCount: 210,
     colors: ['#a37f3a', '#111111', '#556b2f'],
-    image: 'Asset/dual_tip_markers.jpg',
+    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80',
     tag: 'Signature',
     desc: 'Editorial weekly & monthly planner with goal setting trackers, gold foil stamping, and magnetic clasp.'
   },
