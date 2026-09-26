@@ -1532,7 +1532,7 @@ function showOrderReceipt(order) {
   box.innerHTML = `
     <div style="text-align:center; padding-bottom:16px; border-bottom:1px dashed var(--border-light); margin-bottom:16px;">
       <div style="display:flex; justify-content:center; align-items:center; margin-bottom:8px;">
-        <img src="Asset/brand_header_logo.svg" alt="ALPHABET CORPORATION" style="height:54px; width:auto; object-fit:contain;">
+        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:48px; width:auto; object-fit:contain;">
       </div>
       <p style="font-size:0.8rem; color:var(--text-sub); margin-bottom:4px;">679/1 - SEETA RAM NAGAR AHIRWAN, Kanpur, UP - 208004</p>
       <div style="font-size:0.8rem; color:var(--text-sub);">GSTIN: <strong>09DHOPM9732B1ZZ</strong> | PAN: <strong>DHOPM9732B</strong></div>
