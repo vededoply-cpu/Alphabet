@@ -943,6 +943,9 @@ function updateBadges() {
   const cartBadge = document.getElementById('cartBadgeCount');
   if (cartBadge) cartBadge.textContent = cartCount;
 
+  const bottomCartBadge = document.getElementById('bottomNavCartBadge');
+  if (bottomCartBadge) bottomCartBadge.textContent = cartCount;
+
   const wishCount = wishlist.length;
   const wishBadge = document.getElementById('wishlistBadgeCount');
   if (wishBadge) wishBadge.textContent = wishCount;
