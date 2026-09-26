@@ -3022,3 +3022,408 @@ img, svg, video, iframe {
   margin-top: 3px;
 }
 
+/* ==========================================
+   FLIPKART-STYLE SAAS HOMEPAGE DESIGN SYSTEM
+   ========================================== */
+
+/* Flipkart Top Navigation & Search Header */
+.fk-top-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.fk-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 76px;
+  padding: 0 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Yellow Brand Logo Pill */
+.fk-brand-pill-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.fk-logo-pill {
+  background: #fde047;
+  color: #0f172a;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(234, 179, 8, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.fk-logo-pill:hover {
+  transform: translateY(-1px);
+}
+
+.fk-sub-pill {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Flipkart Wide Rounded Search Bar */
+.fk-search-box-wrapper {
+  flex: 1;
+  max-width: 640px;
+  position: relative;
+}
+
+.fk-search-input-group {
+  display: flex;
+  align-items: center;
+  background: #f0f5ff;
+  border: 1.5px solid #dbeafe;
+  border-radius: 10px;
+  padding: 10px 18px;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.fk-search-input-group:focus-within,
+.fk-search-input-group:hover {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
+}
+
+.fk-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.92rem;
+  color: #0f172a;
+  font-family: var(--font-sans);
+}
+
+.fk-search-icon {
+  color: #2563eb;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Flipkart Header Right Actions */
+.fk-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.fk-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #0f172a;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.fk-action-btn:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.fk-login-btn {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 9px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.fk-login-btn:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Flipkart Horizontal Scroll Category Icon Strip */
+.fk-category-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  user-select: none;
+}
+
+.fk-category-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.fk-category-track::-webkit-scrollbar {
+  display: none;
+}
+
+.fk-category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #334155;
+  min-width: 72px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.fk-category-item:hover,
+.fk-category-item.active {
+  color: #2563eb;
+}
+
+.fk-category-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 3px;
+}
+
+.fk-category-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.fk-category-item:hover .fk-category-icon-box,
+.fk-category-item.active .fk-category-icon-box {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
+
+.fk-category-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Flipkart 3-Card Multi-Slide Hero Banner Grid */
+.fk-hero-section {
+  padding: 20px 0;
+  background: #f8fafc;
+}
+
+.fk-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .fk-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fk-banner-card {
+  position: relative;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fk-banner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+}
+
+.fk-banner-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.85) 100%);
+  z-index: 1;
+}
+
+.fk-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.fk-badge-ad {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #cbd5e1;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+.fk-badge-deal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eab308;
+  color: #0f172a;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.fk-banner-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.fk-banner-desc {
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.fk-banner-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fde047;
+}
+
+/* Flipkart 3-Column Spotlight Grid Below Banners */
+.fk-spotlight-section {
+  padding: 10px 0 30px;
+}
+
+.fk-spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .fk-spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fk-spotlight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+}
+
+.fk-spotlight-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+}
+
+.fk-spotlight-img-box {
+  width: 100%;
+  height: 210px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fk-spotlight-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fk-spotlight-brand-pill {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #ffffff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: 1px solid #e2e8f0;
+}
+
+

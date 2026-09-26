@@ -31,49 +31,44 @@
     </div>
   </div>
 
-  <!-- Sticky Luxury Header -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#home" class="brand-logo-wrapper" style="display:flex; align-items:center; text-decoration:none;">
-        <img src="Asset/brand_header_logo.png" alt="ALPHABET CORPORATION" style="height:52px; width:auto; max-width:280px; object-fit:contain;">
-      </a>
+  <!-- Flipkart-Style Top Header Bar -->
+  <header class="fk-top-header" id="header">
+    <div class="fk-header-inner">
+      <!-- Yellow Logo Pill + Sub Pill -->
+      <div class="fk-brand-pill-wrapper">
+        <a href="index.html" class="fk-logo-pill">
+          <img src="Asset/brand_header_logo.png" alt="ALPHABET" style="height:34px; width:auto;">
+        </a>
+        <span class="fk-sub-pill">✈️ B2B Wholesale</span>
+      </div>
 
-      <!-- Main Editorial Navigation -->
-      <nav class="nav-links-wrapper" id="navLinksWrapper" aria-label="Main Navigation">
-        <a href="index.html" class="nav-item-link active">HOME</a>
-        <a href="shop.html" class="nav-item-link">SHOP</a>
-        <a href="office.html" class="nav-item-link">OFFICE STATIONERY</a>
-        <a href="gifting.html" class="nav-item-link">CORPORATE GIFT SET</a>
-        <a href="packaging.html" class="nav-item-link">PACKAGING SOLUTION</a>
-        <a href="about.html" class="nav-item-link">ABOUT</a>
-        <a href="contact.html" class="nav-item-link">CONTACT</a>
-      </nav>
-
-      <!-- Right Header Action Icons -->
-      <div class="header-right-icons">
-        <button class="cmd-search-trigger" onclick="openSearchOverlay()" title="Search catalog (Ctrl + K)">
-          <svg class="svg-icon-sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span style="font-size:0.8rem;">Search SKU or product...</span>
+      <!-- Flipkart Wide Search Bar -->
+      <div class="fk-search-box-wrapper">
+        <div class="fk-search-input-group" onclick="openSearchOverlay()">
+          <svg class="fk-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="fk-search-input" placeholder="Search for Products, Brands, Tapes, Paper &amp; Packaging..." readonly>
           <kbd class="cmd-key-badge">⌘K</kbd>
+        </div>
+      </div>
+
+      <!-- Header Right Actions -->
+      <div class="fk-header-actions">
+        <!-- Delivery Location Selector -->
+        <button class="fk-action-btn" onclick="openPincodeModal()" style="color:#2563eb; font-size:0.82rem;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Location: <strong id="headerLocationLabel" style="color:#2563eb;">Select Delivery Pincode &gt;</strong></span>
         </button>
-        <button class="icon-btn-header" onclick="openCartDrawer()" title="Wishlist" aria-label="Wishlist">
-          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-          <span class="badge-count" id="wishlistBadgeCount">0</span>
-        </button>
+
+        <!-- User Login Button with Hover Dropdown -->
         <div class="user-account-menu-wrapper" id="userAccountMenuWrapper">
-          <button class="header-login-btn" onclick="openAuthModal('login')">
-            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span class="user-name-label" id="headerUserName">Login</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
+          <button class="fk-action-btn fk-login-btn" onclick="openAuthModal('login')">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span id="headerUserName">Login</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="header-user-dropdown" id="headerUserDropdown">
             <div class="dropdown-header-box" id="dropdownHeaderGuest">
-              <p>New customer?</p>
+              <p>New B2B customer?</p>
               <a href="javascript:void(0)" onclick="openAuthModal('signup')">Sign Up</a>
             </div>
             <div class="dropdown-header-box hidden" id="dropdownHeaderUser">
@@ -108,154 +103,194 @@
             </ul>
           </div>
         </div>
-        <button class="icon-btn-header" id="cartBtnHeader" title="Shopping Bag" aria-label="Shopping Bag">
-          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-          <span class="badge-count" id="cartBadgeCount">0</span>
+
+        <!-- Wishlist -->
+        <button class="fk-action-btn" onclick="openCartDrawer()" title="Wishlist">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span>Wishlist</span>
+          <span class="badge-count" id="wishlistBadgeCount">0</span>
         </button>
 
-        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
-          <svg class="svg-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <!-- Cart Drawer Button -->
+        <button class="fk-action-btn" id="cartBtnHeader" title="Shopping Bag" onclick="openCartDrawer()">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>Cart</span>
+          <span class="badge-count" id="cartBadgeCount">0</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Slide-Over Shopping Bag / Cart Drawer -->
-  <div class="drawer-backdrop" id="cartDrawerOverlay">
-    <div class="slide-drawer">
-      <div class="drawer-header">
-        <h3>Shopping Bag</h3>
-        <button class="drawer-close-btn" id="closeCartDrawer">✕</button>
-      </div>
-
-      <div class="drawer-body" id="cartDrawerBody">
-        <!-- Rendered dynamically by alpha.js -->
-      </div>
-
-      <div class="drawer-footer">
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.95rem;">
-          <span>Subtotal:</span>
-          <strong id="cartSubtotalText">₹0</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed var(--border-light); padding-top:10px; margin-bottom:20px;">
-          <span>Total:</span>
-          <strong id="cartTotalText">₹0</strong>
-        </div>
-        <button class="btn-editorial btn-gold" style="width: 100%;" onclick="openCheckoutModal()">PROCEED TO CHECKOUT &rarr;</button>
-      </div>
+  <!-- Flipkart Horizontal Scroll Category Icon Navigation Strip -->
+  <nav class="fk-category-strip" aria-label="Product Categories">
+    <div class="fk-category-track">
+      <a href="#collection" class="fk-category-item active">
+        <div class="fk-category-icon-box">⭐</div>
+        <span class="fk-category-label">For You</span>
+      </a>
+      <a href="office.html" class="fk-category-item">
+        <div class="fk-category-icon-box">📝</div>
+        <span class="fk-category-label">Stationery</span>
+      </a>
+      <a href="office.html" class="fk-category-item">
+        <div class="fk-category-icon-box">🏢</div>
+        <span class="fk-category-label">Office Supplies</span>
+      </a>
+      <a href="gifting.html" class="fk-category-item">
+        <div class="fk-category-icon-box">🎁</div>
+        <span class="fk-category-label">Gifting Sets</span>
+      </a>
+      <a href="packaging.html" class="fk-category-item">
+        <div class="fk-category-icon-box">📦</div>
+        <span class="fk-category-label">Packaging</span>
+      </a>
+      <a href="office.html" class="fk-category-item">
+        <div class="fk-category-icon-box">📄</div>
+        <span class="fk-category-label">Copier Paper</span>
+      </a>
+      <a href="packaging.html" class="fk-category-item">
+        <div class="fk-category-icon-box">🎗️</div>
+        <span class="fk-category-label">BOPP Tapes</span>
+      </a>
+      <a href="packaging.html" class="fk-category-item">
+        <div class="fk-category-icon-box">📐</div>
+        <span class="fk-category-label">Boxes</span>
+      </a>
+      <a href="packaging.html" class="fk-category-item">
+        <div class="fk-category-icon-box">🛡️</div>
+        <span class="fk-category-label">Courier Bags</span>
+      </a>
+      <a href="gifting.html" class="fk-category-item">
+        <div class="fk-category-icon-box">✒️</div>
+        <span class="fk-category-label">Executive Pens</span>
+      </a>
+      <a href="office.html" class="fk-category-item">
+        <div class="fk-category-icon-box">📋</div>
+        <span class="fk-category-label">Folders &amp; Files</span>
+      </a>
+      <a href="shop.html" class="fk-category-item">
+        <div class="fk-category-icon-box">🏷️</div>
+        <span class="fk-category-label">Bulk Wholesale</span>
+      </a>
     </div>
-  </div>
+  </nav>
 
-  <!-- Main Editorial Page Structure -->
+  <!-- Main Application Content -->
   <main id="home">
     
-    <!-- 1. Hero Multi-Slide Interactive Carousel -->
-    <section class="hero-slider-section">
-      <!-- Slide 1: Fine Stationery -->
-      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1920&q=85');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">ALPHABET CORPORATION &bull; B2B MANUFACTURER &amp; WHOLESALE HUB</div>
-            <h1 class="hero-main-title">ALPHABET CORPORATION</h1>
-            <p class="hero-description">
-              India's premier industrial manufacturer &amp; wholesale supplier of fine stationery, corporate office supplies, corporate gifting combos, and heavy-duty custom packaging solutions.
-            </p>
-            <div class="hero-cta-buttons">
-              <a href="#collection" class="btn-editorial btn-gold">SHOP B2B CATALOGUE</a>
-              <a href="#categories" class="btn-editorial btn-outline-white">EXPLORE CATEGORIES</a>
+    <!-- Flipkart 3-Card Multi-Slide Hero Banner Section -->
+    <section class="fk-hero-section">
+      <div class="container">
+        <div class="fk-hero-grid">
+          <!-- Banner 1: BOPP Packaging Tape Spotlight (Nova Style) -->
+          <div class="fk-banner-card" style="background-image: url('Asset/bopp_clear_tape.jpg');">
+            <span class="fk-badge-ad">AD</span>
+            <div class="fk-banner-content">
+              <span class="fk-badge-deal">🔥 EARLY BIRD DEALS</span>
+              <h2 class="fk-banner-title">BOPP CLEAR PACKAGING TAPE</h2>
+              <p class="fk-banner-desc">48mm Width x 65m Length • 48-Micron High-Tensile Acrylic Film • Industrial Carton Sealing</p>
+            </div>
+            <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div class="fk-banner-price">From ₹0 <span style="font-size:0.85rem; color:#e2e8f0; font-weight:500;">/ Roll Sample</span></div>
+                <div style="font-size:0.75rem; color:#fbbf24; margin-top:2px;">💳 ICICI Bank 10% Instant Savings</div>
+              </div>
+              <button class="btn-editorial btn-gold" style="padding:10px 20px; font-size:0.75rem; border-radius:8px;" onclick="addToCart('prod-9')">ADD TO CART &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Banner 2: Heavy-Duty Corrugated Shipping Boxes (Boltt Style) -->
+          <div class="fk-banner-card" style="background-image: url('Asset/boxes_stack.jpg');">
+            <span class="fk-badge-ad">AD</span>
+            <div class="fk-banner-content">
+              <span class="fk-badge-deal" style="background:#2563eb; color:#fff;">📦 INDUSTRIAL FREIGHT</span>
+              <h2 class="fk-banner-title">HEAVY-DUTY CORRUGATED BOXES</h2>
+              <p class="fk-banner-desc">3-Ply &amp; 5-Ply Kraft Paper • Multi-Depth Stackable Freight Cartons • High Bursting Load Strength</p>
+            </div>
+            <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div class="fk-banner-price">From ₹0 <span style="font-size:0.85rem; color:#e2e8f0; font-weight:500;">/ Box Sample</span></div>
+                <div style="font-size:0.75rem; color:#fbbf24; margin-top:2px;">💳 Direct Kanpur Factory Rate</div>
+              </div>
+              <button class="btn-editorial btn-gold" style="padding:10px 20px; font-size:0.75rem; border-radius:8px;" onclick="addToCart('prod-13')">ADD TO CART &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Banner 3: Corporate Gifting Combos (Beardo Style) -->
+          <div class="fk-banner-card" style="background-image: url('Asset/executive_gift_set.jpg');">
+            <span class="fk-badge-ad">AD</span>
+            <div class="fk-banner-content">
+              <span class="fk-badge-deal" style="background:#9333ea; color:#fff;">🎁 GIFTING SPOTLIGHT</span>
+              <h2 class="fk-banner-title">EXECUTIVE GIFT COMBOS</h2>
+              <p class="fk-banner-desc">Custom Logo Embossing • Brass Pen + Leather Notebook + Vacuum Flask • Corporate Onboarding</p>
+            </div>
+            <div style="position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div class="fk-banner-price">Up to 40% Off <span style="font-size:0.85rem; color:#e2e8f0; font-weight:500;">Bulk Combos</span></div>
+                <div style="font-size:0.75rem; color:#fbbf24; margin-top:2px;">✨ Free Custom Logo Branding</div>
+              </div>
+              <a href="gifting.html" class="btn-editorial btn-gold" style="padding:10px 20px; font-size:0.75rem; border-radius:8px;">EXPLORE COMBOS &rarr;</a>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Slide 2: BOPP Transparent Packaging Tape Spotlight -->
-      <div class="hero-slide" style="background-image: url('Asset/bopp_clear_tape.jpg');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Industrial &amp; Packaging Spotlight</div>
-            <h1 class="hero-main-title">BOPP CLEAR PACKAGING TAPE ROLL</h1>
-            <p class="hero-description">
-              High-tensile clear BOPP packaging tape engineered for heavy-duty carton sealing, 48mm width, 65m length, 48-micron film with instant tack water-based acrylic adhesive. Available in bulk &amp; custom widths.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Roll (Sample Roll)</span>
+    <!-- Flipkart 3-Column Spotlight Product Grid (Aquafresh & Kenstar Style) -->
+    <section class="fk-spotlight-section">
+      <div class="container">
+        <div class="fk-spotlight-grid">
+          <!-- Spotlight Card 1: A4 Copier Paper (Aquafresh Style) -->
+          <div class="fk-spotlight-card">
+            <div class="fk-spotlight-img-box">
+              <img src="Asset/a4_copier_paper.png" alt="A4 Copier Paper 75 GSM">
+              <span class="fk-spotlight-brand-pill">📄 ALPHABET PAPER</span>
+              <span class="fk-badge-ad">AD</span>
             </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP PACKAGING TAPE</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-9')">ADD TO BAG &rarr;</button>
+            <div>
+              <h4 style="font-family:var(--font-serif); font-size:1.1rem; color:var(--text-dark); margin-bottom:4px;">A4 Copier Paper 75 GSM (500 Sheets)</h4>
+              <p style="font-size:0.82rem; color:var(--text-sub);">Ultra-white, jam-free high-speed printer &amp; photocopier paper ream for corporate office printing.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #f1f5f9; padding-top:12px;">
+              <span style="font-size:1.2rem; font-weight:800; color:var(--accent-blue);">₹0 <span style="font-size:0.75rem; color:#64748b; font-weight:500;">/ Ream (Sample)</span></span>
+              <button class="btn-editorial btn-gold" style="padding:8px 16px; font-size:0.75rem; border-radius:6px;" onclick="addToCart('prod-1')">ADD TO BAG</button>
+            </div>
+          </div>
+
+          <!-- Spotlight Card 2: Self-Locking Master Packaging Carton (Kenstar Style 1) -->
+          <div class="fk-spotlight-card">
+            <div class="fk-spotlight-img-box">
+              <img src="Asset/corrugated_box.png" alt="Self-Locking Master Carton">
+              <span class="fk-spotlight-brand-pill">📦 ALPHABET PACKAGING</span>
+              <span class="fk-badge-ad">AD</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-serif); font-size:1.1rem; color:var(--text-dark); margin-bottom:4px;">Self-Locking Master Packaging Carton</h4>
+              <p style="font-size:0.82rem; color:var(--text-sub);">Precision die-cut self-locking corrugated mailer box with crush-proof double wall protection.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #f1f5f9; padding-top:12px;">
+              <span style="font-size:1.2rem; font-weight:800; color:var(--accent-blue);">₹0 <span style="font-size:0.75rem; color:#64748b; font-weight:500;">/ Carton (Sample)</span></span>
+              <button class="btn-editorial btn-gold" style="padding:8px 16px; font-size:0.75rem; border-radius:6px;" onclick="addToCart('prod-11')">ADD TO BAG</button>
+            </div>
+          </div>
+
+          <!-- Spotlight Card 3: Custom Printed Packaging Tape (Kenstar Style 2) -->
+          <div class="fk-spotlight-card">
+            <div class="fk-spotlight-img-box">
+              <img src="Asset/custom_printed_tape.jpg" alt="Custom Printed Tapes">
+              <span class="fk-spotlight-brand-pill">🎗️ ALPHABET TAPES</span>
+              <span class="fk-badge-ad">AD</span>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-serif); font-size:1.1rem; color:var(--text-dark); margin-bottom:4px;">Custom Logo Printed Packaging Tape</h4>
+              <p style="font-size:0.82rem; color:var(--text-sub);">Customized logo printed BOPP sealing tape for branded e-commerce unboxing and anti-tamper security.</p>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid #f1f5f9; padding-top:12px;">
+              <span style="font-size:1.2rem; font-weight:800; color:var(--accent-blue);">₹0 <span style="font-size:0.75rem; color:#64748b; font-weight:500;">/ Roll (Sample)</span></span>
+              <button class="btn-editorial btn-gold" style="padding:8px 16px; font-size:0.75rem; border-radius:6px;" onclick="addToCart('prod-10')">ADD TO BAG</button>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Slide 3: Heavy-Duty Corrugated Shipping Boxes Stack -->
-      <div class="hero-slide" style="background-image: url('Asset/boxes_stack.jpg');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Logistics &amp; Wholesale Packaging</div>
-            <h1 class="hero-main-title">HEAVY-DUTY CORRUGATED PACKAGING BOXES</h1>
-            <p class="hero-description">
-              Multi-depth 3-ply &amp; 5-ply Kraft corrugated shipping boxes with high bursting strength, superior stackability, and heavy load resistance for wholesale dispatch &amp; e-commerce freight.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Box)</span>
-            </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP SHIPPING BOXES</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-13')">ADD TO BAG &rarr;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 4: Self-Locking Master Packaging Carton -->
-      <div class="hero-slide" style="background-image: url('Asset/corrugated_box.png');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Custom E-Commerce Packaging</div>
-            <h1 class="hero-main-title">SELF-LOCKING MASTER PACKAGING CARTON</h1>
-            <p class="hero-description">
-              Precision die-cut self-locking master packaging box featuring double-walled crush protection, clean telescoping lid closure, and smooth natural kraft paper finish for premium unboxing.
-            </p>
-            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 24px;">
-              ₹0 <span style="font-size: 1rem; color: #dddddd; font-weight: 500;">/ Box (Sample Carton)</span>
-            </div>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">SHOP MASTER CARTONS</a>
-              <button class="btn-editorial btn-outline-white" onclick="addToCart('prod-11')">ADD TO BAG &rarr;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 5: Custom Branding & Printed Tapes -->
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1920&q=85');">
-        <div class="container">
-          <div class="hero-content-box">
-            <div class="hero-tagline">Custom Branding &amp; E-Commerce</div>
-            <h1 class="hero-main-title">CUSTOM PRINTED TAPES &amp; BRANDED BOXES</h1>
-            <p class="hero-description">
-              Elevate your brand unboxing experience with custom logo printed packaging tapes, self-locking mailer boxes, and security courier flyer bags.
-            </p>
-            <div class="hero-cta-buttons">
-              <a href="#packaging-section" class="btn-editorial btn-gold">CUSTOM PACKAGING</a>
-              <a href="#collection" class="btn-editorial btn-outline-white">BROWSE STORE</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Carousel Arrow Controls -->
-      <button class="hero-nav-arrow prev" onclick="prevHeroSlide()" aria-label="Previous Slide">&lsaquo;</button>
-      <button class="hero-nav-arrow next" onclick="nextHeroSlide()" aria-label="Next Slide">&rsaquo;</button>
-
-      <!-- Carousel Dot Pagination -->
-      <div class="hero-dots-container">
-        <span class="hero-dot active" onclick="goToHeroSlide(0)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(1)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(2)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(3)"></span>
-        <span class="hero-dot" onclick="goToHeroSlide(4)"></span>
       </div>
     </section>
 
